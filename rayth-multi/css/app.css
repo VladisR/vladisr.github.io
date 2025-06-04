@@ -156,7 +156,7 @@ template {
   display: inline-block;
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  fill: #000;
   font-size: 0;
 }
 .svg-icon__link {
@@ -418,14 +418,17 @@ select {
   margin-bottom: 0;
 }
 .footer__menu-title {
-  padding-bottom: 9px;
-  border-bottom: 1px solid #d4d4d4;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(212,212,212,0.3);
   text-transform: uppercase;
   color: #aeaeae;
   margin-bottom: 12px;
 }
 .footer__menu ul {
   margin-bottom: 10px;
+}
+.footer__menu ul:last-child {
+  margin-bottom: 0;
 }
 .footer__menu ul li {
   margin-bottom: 10px;
@@ -818,6 +821,7 @@ html {
   position: absolute;
   left: 10px;
   bottom: -75px;
+  z-index: 3;
 }
 .media__content {
   position: relative;
@@ -889,14 +893,15 @@ html {
   height: 100%;
   background: #000;
   opacity: 0.3;
-  cursor: pointer;
+  pointer-events: none;
+  z-index: 1;
 }
 .c-video:hover .c-video__play > span {
   background: #ed1c24;
   border-color: #ed1c24;
 }
 .c-video.is-clicked:before {
-  opacity: 0;
+  display: none;
 }
 .c-video.is-clicked .c-video__play {
   opacity: 0;
@@ -915,7 +920,7 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   transition: 0.3s opacity, 0.3s visibility;
 }
 .c-video__play > span {
@@ -943,6 +948,7 @@ html {
   height: 100%;
   display: block;
   min-height: 120px;
+  position: relative;
 }
 .c-video img {
   display: block;
@@ -1039,7 +1045,7 @@ html {
   background: #fafafa;
 }
 .carousel.staff .carousel__title {
-  width: 460px;
+  max-width: 460px;
 }
 .carousel.staff .swiper-slide {
   width: 260px;
@@ -1643,6 +1649,7 @@ input {
   display: block;
   width: 12px;
   height: 12px;
+  fill: #000;
 }
 .mobile-sidebar .site-logo {
   width: 30px;
@@ -2958,6 +2965,7 @@ body .swiper-button-next:active:after {
   }
   .mosaic__item:nth-child(4) {
     margin-left: auto;
+    align-self: flex-start;
   }
   .mosaic__item:nth-child(5) {
     margin-right: 10%;

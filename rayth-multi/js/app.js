@@ -117,6 +117,9 @@ function videos() {
   let videoContainers = document.querySelectorAll('.js-video');
   videoContainers.forEach(item => {
     item.addEventListener('click', function (evt) {
+      document.querySelectorAll('.js-player').forEach(player => {
+        player.pause();
+      });
       let url = this.dataset.url;
       let video = item.querySelector('video');
 
@@ -128,7 +131,7 @@ function videos() {
 
 
 
-                      <video width="1160" height="480" controls>
+                      <video width="1160" height="480" controls playsinline>
 
 
 
@@ -145,46 +148,11 @@ function videos() {
         openModal('[data-modal-id="' + modalId + '"]');
         player.load();
         player.addEventListener('loadeddata', function () {
-          this.play();
-        }, false);
-      } // if(video) {
-      //     if (video.getAttributeNames()[2] != 'controls') {
-      //         video.setAttribute('controls', '');
-      //     }
-      //     // if (!video.paused) {
-      //     //   // Video is playing
-      //     //   console.log('Video is playing');
-      //     // } else {
-      //     //   // Video is paused or has not started
-      //     //   console.log('Video is paused');
-      //     // }
-      //     item.classList.add('is-clicked')
-      //     if(item.classList.contains('is-clicked')) {
-      //         if(isMobile) {
-      //             video.play();
-      //         }
-      //     }
-      //     if (!isMobile) {
-      //         if(this.classList.contains('is-playing')) {
-      //             this.classList.remove('is-playing')
-      //             // if(isMobile) {
-      //             //     video.pause();
-      //             // }
-      //         } else {
-      //             videoContainers.forEach((item) => {
-      //                 if(item.classList.contains('is-playing')) {
-      //                     item.querySelector('video').pause();
-      //                 }
-      //                 item.classList.remove('is-playing')
-      //             });
-      //             this.classList.add('is-playing')
-      //             if(isMobile) {
-      //                 video.play();
-      //             }
-      //         }
-      //     }
-      // }
-
+          setTimeout(function () {
+            document.querySelector('[data-modal-id="video"]').querySelector('video').play();
+          }, 300);
+        });
+      }
     });
   });
 }
@@ -516,35 +484,58 @@ switchers.forEach(switcher => {
 // switcher();
 
 const videoPlayers = document.querySelectorAll('.js-player');
+Object.defineProperty(HTMLMediaElement.prototype, 'isPlaying', {
+  get: function () {
+    return !this.paused && !this.ended && this.readyState > 2;
+  }
+});
 videoPlayers.forEach(video => {
   const videoContainer = video.closest('.c-video');
   const play = videoContainer.querySelector('.c-video__play');
   play.addEventListener('click', function () {
-    videoPlayers.forEach(videos => {
-      if (!videos.paused) {
-        videos.pause();
+    setTimeout(function () {
+      if (!video.closest('.c-video').classList.contains('is-clicked')) {
+        if (video.getAttributeNames()[2] != 'controls') {
+          video.setAttribute('controls', '');
+        }
       }
-    });
-    video.play();
 
-    if (video.getAttributeNames()[2] != 'controls') {
-      video.setAttribute('controls', '');
-    }
-
-    video.addEventListener('play', () => {
-      videoContainer.classList.add('is-playing');
-    });
-    video.addEventListener('pause', () => {
-      videoContainer.classList.remove('is-playing');
-    });
-    video.addEventListener('ended', () => {
-      videoContainer.classList.remove('is-playing');
-    });
-    video.addEventListener('seeking', () => {
-      videoContainer.classList.add('is-playing');
-    });
-    video.addEventListener('seeked', () => {
-      videoContainer.classList.add('is-playing');
+      video.addEventListener('play', () => {
+        videoContainer.classList.add('is-playing');
+      });
+      video.addEventListener('pause', () => {
+        videoContainer.classList.remove('is-playing');
+      });
+      video.addEventListener('ended', () => {
+        videoContainer.classList.remove('is-playing');
+      });
+      video.addEventListener('seeking', () => {
+        videoContainer.classList.add('is-playing');
+      });
+      video.addEventListener('seeked', () => {
+        videoContainer.classList.add('is-playing');
+      });
+      videoPlayers.forEach(videos => {
+        if (!videos.paused) {
+          videos.pause();
+        }
+      });
+      video.closest('.c-video').classList.add('is-clicked');
+      video.play(); // setTimeout(function(){
+      //     if (video.isPlaying) {
+      //         console.log('Video is playing');
+      //         // video.pause();
+      //     } else {
+      //         // video.play();
+      //         console.log('Video is paused');
+      //     }
+      // }, 300)
+      // if (!video.paused) {
+      //     console.log('Video is playing');
+      //     // video.play();
+      // } else {
+      //     console.log('Video is paused');
+      // }
     });
   });
 });
@@ -768,10 +759,26 @@ const fadeIn = (el, timeout, display) => {
 };
 
 if (document.querySelector('.route-build')) {
-  navigator.geolocation.getCurrentPosition(function (position) {
-    let lat = position.coords.latitude;
-    let lng = position.coords.longitude;
-    document.querySelector('.js-apple-route').setAttribute('href', 'http://maps.apple.com/?saddr=' + lat + ',' + lng + '&daddr=59.440697356371814,24.78116699451371');
+  document.querySelector('.js-apple-route').addEventListener('click', function (evt) {
+    if (!this.classList.contains('is-active')) {
+      evt.preventDefault();
+
+      var _this = this;
+
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+        var coords = _this.dataset.coords;
+
+        _this.setAttribute('href', 'http://maps.apple.com/?saddr=' + lat + ',' + lng + '&daddr=' + coords + '');
+
+        setTimeout(function () {
+          window.open('http://maps.apple.com/?saddr=' + lat + ',' + lng + '&daddr=' + coords + ''); // window.location = 'http://maps.apple.com/?saddr=' + lat + ',' + lng + '&daddr=' + coords + '', '_blank';
+        }, 200);
+      });
+
+      _this.classList.add('is-active');
+    }
   });
 }
 
