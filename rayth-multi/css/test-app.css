@@ -1,0 +1,233 @@
+.header {
+  flex: none;
+  padding-top: 48px;
+}
+.header.scrolled .header__in {
+  box-shadow: 1px 1px 5px 0px rgba(118,13,18,0.2);
+}
+.header__in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.7);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  z-index: 20;
+}
+.header__content {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+  max-width: 1400px;
+}
+.header__burger {
+  position: relative;
+  width: 40px;
+  height: 17px;
+  margin-left: auto;
+}
+.header__burger:before,
+.header__burger:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  background: #000;
+  height: 2px;
+  border-radius: 3px;
+}
+.header__burger:before {
+  top: 4px;
+}
+.header__burger:after {
+  bottom: 4px;
+}
+.header .site-logo {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin-right: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.header .site-logo img {
+  width: 174px;
+  max-width: none;
+}
+.header .main-menu,
+.header .site-langs,
+.header .socials,
+.header__sign-up.site-button {
+  display: none;
+}
+.header__contacts {
+  margin-left: 10px;
+}
+.header__contacts-phone a {
+  text-decoration: none;
+  font-size: 19px;
+  color: #ed1c24;
+}
+.header__contacts-address {
+  display: none;
+}
+.header {
+  display: none;
+  width: 1220px;
+}
+@media (min-width: 992px) {
+  .header {
+    padding-top: 90px;
+  }
+  .header__content {
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .header .site-logo {
+    margin-right: 0;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header__contacts {
+    margin-left: 0;
+    text-align: right;
+  }
+  .header__contacts-phone {
+    line-height: 23px;
+  }
+  .header__contacts-phone a {
+    font-size: 20px;
+  }
+  .header__contacts-address {
+    font-size: 12px;
+    display: block;
+    line-height: 14px;
+    margin-top: 2px;
+  }
+  .header .main-menu,
+  .header .site-langs {
+    display: block;
+  }
+  .header .site-langs__item {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .header__sign-up.site-button {
+    display: inline-flex;
+    padding-bottom: 2px;
+    margin-left: 0;
+    min-height: 41px;
+  }
+  .header .socials {
+    flex: none;
+    display: block;
+  }
+  .header .socials__items {
+    flex: none;
+    margin-left: 0;
+  }
+  .header .socials__item {
+    margin-left: 0;
+  }
+  .header .main-menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header .main-menu > ul > li {
+    margin-right: 7px;
+    position: relative;
+  }
+  .header .main-menu > ul > li:last-child {
+    margin-right: 0;
+  }
+  .header .main-menu > ul > li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  .header .main-menu > ul > li ul {
+    left: -20px;
+    top: 100%;
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 890px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 0px rgba(118,13,18,0.2);
+    -moz-columns: 3;
+         columns: 3;
+  }
+  .header .main-menu > ul > li ul li {
+    margin-bottom: 6px;
+  }
+  .header .main-menu > ul > li ul li:last-child {
+    margin-bottom: 0;
+  }
+  .header .main-menu > ul > li ul li a {
+    font-size: 14px;
+  }
+  .header .main-menu > ul > li ul li a:hover {
+    color: #ed1c24;
+  }
+  .header .main-menu > ul > li:hover > a {
+    color: #ed1c24;
+  }
+  .header .main-menu > ul > li:hover:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: 0;
+    height: 30px;
+    top: 100%;
+  }
+  .header .main-menu > ul > li:hover ul {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .header .site-logo {
+    width: auto;
+    height: auto;
+  }
+  .header .site-logo img {
+    display: block;
+    width: 159px;
+  }
+  .header__contacts-phone {
+    font-size: 20px;
+  }
+  .header .main-menu ul li {
+    margin-right: 15px;
+  }
+  .header .main-menu ul li a:after {
+    width: 6px;
+    height: 5px;
+    margin-top: 1px;
+  }
+  .header .site-langs__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .header .socials__item {
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+  .header .socials__item:first-child {
+    margin-left: 0;
+  }
+  .header .socials__item:last-child {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .header__content {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1397px;
+  }
+}

@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Калькулятор</title>
+        <meta name="description" content="Калькулятор">
+        <meta name="theme-color" content="">
+
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta name="format-detection" content="telephone=no">
+
+        <link type="image/svg" href="favicon.svg" rel="icon">
+
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta name="MobileOptimized" content="320">
+        <meta name="HandheldFriendly" content="True">
+        
+        <style>
+            .most-popular .swiper,button,hr,input{overflow:visible}img,legend{max-width:100%}progress,sub,sup{vertical-align:baseline}*,::after,::before,legend{box-sizing:border-box}*,html{-webkit-tap-highlight-color:transparent}.header .socials__item:hover img,.header .socials__item:hover svg,.mobile-sidebar .socials__item:hover img,.mobile-sidebar .socials__item:hover svg{transform:scale(1.25)}.pricelist2__item-title a:hover,abbr[title]{text-decoration:underline}@font-face{font-family:Oranienbaum;src:url("fonts/Oranienbaum-Regular.woff2") format('woff2'),url("fonts/Oranienbaum-Regular.woff") format('woff');font-weight:400;font-style:normal;font-display:swap}html{line-height:1.15;-webkit-text-size-adjust:100%}.b-modal.is-loadet,.intro.swiper-initialized .intro__item+.intro__item,.intro.swiper-initialized .swiper-pagination,.main-menu .is-opened .level-2,.main-menu .level-2.lvl2-opened,details,main{display:block}h1{margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}.button,.cars__model,.cars__model:hover,.main-menu .level-2 ul>li a,.main-menu>ul>li a,.mobile-sidebar .db-menu>ul>li>a,.most-popular__item-in,.pricelist2__item-title a,.site-button,.site-name,.woocommerce-breadcrumb a,a:hover,a[href^="mailto:"],a[href^="tel:"]{text-decoration:none}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none;height:auto}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;padding:0;white-space:normal}.button,.theme-color,body{color:#000}textarea{overflow:auto;-webkit-overflow-scrolling:touch}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}.header .db-menu,.main-svg-sprite,[hidden],template{display:none}.svg-icon{display:inline-block;width:24px;height:24px;fill:currentColor;font-size:0}.svg-icon__link{vertical-align:top;fill:inherit;width:inherit;height:inherit}.b-modal:after,.b-modal__container{vertical-align:middle;display:inline-block}*{min-width:0;min-height:0}html{scroll-behavior:smooth;font-family:sans-serif;min-height:100vh;min-height:calc(var(--vh,1vh) * 100)}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:16px;font-weight:400;line-height:1.22;background-color:#fff}.overflow-hidden,svg:not(:root){overflow:hidden;-webkit-overflow-scrolling:touch}blockquote{padding:20px;margin:30px 0;border-left:5px solid #000;background-color:rgba(0,0,0,.03)}.screen-reader-text,.sr-only,.visuallyhidden{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important;-webkit-overflow-scrolling:touch}.container,.header .site-name{margin-right:auto}.screen-reader-text:active,.screen-reader-text:focus,.sr-only:active,.sr-only:focus,.visuallyhidden:active,.visuallyhidden:focus{background-color:#eee;clip:auto!important;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}.container{width:100%;max-width:1640px;margin-left:auto;padding-left:15px;padding-right:15px}nav ul{padding:0;margin:0;list-style:none}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-weight:400;line-height:1;color:#000;font-family:Oranienbaum}.h1,h1{font-size:30px}.h2,h2{font-size:28px;margin-bottom:23px}.h3,h3{font-size:21px;margin-top:34px;margin-bottom:30px}.h4,h4{font-size:18px;margin-bottom:20px;margin-top:20px}.h5,.h6,h5,h6{font-size:16px}.bl-title{font-family:Oranienbaum;font-size:30px;line-height:1}a{background-color:transparent;color:#2e73da;transition:color .2s,background .2s}p{margin-top:22px;margin-bottom:22px}p:first-child{margin-top:0}p:last-child{margin-bottom:0}.button{padding:8px 20px 10px;display:inline-block;line-height:1;border:0;background:#eee;cursor:pointer;transition:background .2s,color .2s}.header,.header a,.mobile-sidebar .site-name{color:#fff}.button:hover,.site-button.type-2{background:#000;color:#fff}body,html{margin:0;padding:0}.app{display:flex;flex-direction:column;height:100vh;height:calc(var(--vh,1vh) * 100)}.app__wrapper{display:flex;flex-direction:column;min-height:100vh;min-height:calc(var(--vh,1vh) * 100)}.app__content{display:flex;flex:1 0 auto}.app__main{flex:1 1}.header{flex:none;padding-top:142px;position:relative;z-index:50}.header__in{position:fixed;left:0;top:0;right:0;z-index:50}.header__content{background:#000}.header__content-top{padding-top:13px;padding-bottom:14px;display:flex;align-items:center;flex-wrap:wrap}.header__burger .svg-icon{width:32px;height:16px;display:block}.header__actions{width:calc(100% + 8px);margin-top:16px;display:flex;margin-left:-8px}.header__actions-item{margin-left:8px;display:flex;align-items:center;justify-content:center;flex-grow:1;padding:9px 3px;min-height:32px;font-size:11px;border:1px solid #686868}.site-name,.socials{align-items:center}.header__actions-item--phone{font-size:13px}.header__actions-item .svg-icon{margin-right:8px;width:12px;height:14px}.header .socials{align-self:center;display:none}.header .socials__items{margin-left:-20px}.header .socials__item{margin-left:14px;width:auto;height:auto;background:0 0}.header .socials__item img,.header .socials__item svg{max-width:17px;transition:transform .25s}.header .socials__item:hover{background:0 0}.header:has(.main-menu li.is-opened){position:relative}.header:has(.main-menu li.is-opened):after{content:'';position:fixed;left:0;top:0;right:0;height:100vh;height:calc(var(--vh,1vh) * 100);z-index:40;background:rgba(0,0,0,.8)}.site-name{display:inline-flex}.site-name__logo{width:30px;margin-right:13px;margin-top:-3px}.site-name__logo-text{font-size:23px;font-family:Oranienbaum;margin-right:12px}.site-name__desc{width:109px;line-height:120%;color:#9c9c9c;font-size:9px}.socials__items{display:flex;align-items:center;margin-left:-6px}.socials__item{width:40px;height:36px;background:#000;display:flex;justify-content:center;align-items:center;margin-left:6px}.socials__item img,.socials__item svg{max-width:24px;display:block}.socials__item:hover{background:#333}.mobile-sidebar{position:fixed;left:0;top:0;right:0;width:100%;height:100vh;height:calc(var(--vh,1vh) * 100);pointer-events:none;z-index:100}.mobile-sidebar:before{content:"";position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.7);opacity:0;transition:opacity .3s}.mobile-sidebar__container{position:fixed;overflow:hidden;left:0;top:0;bottom:0;width:100%;max-width:480px;background:#000;transition:transform .2s;transform:translateX(-100%);display:flex;flex-direction:column;-webkit-overflow-scrolling:touch}.main-menu .level-2,.main-menu .level-2-in,.main-menu>ul,.mobile-sidebar__content{-webkit-overflow-scrolling:touch}.mobile-sidebar__header{flex:none;display:flex;align-items:center;justify-content:space-between;padding:5px 15px;border-bottom:1px solid rgba(255,255,255,.2)}.mobile-sidebar__close{right:0;padding-left:1px;top:0;display:flex;justify-content:center;align-items:center;width:51px;height:51px;margin-right:-10px;background:#000;z-index:1;border-radius:0 0 0 10px;box-shadow:0 0 20px rgba(0,0,0,.5)}.mobile-sidebar__close .svg-icon{pointer-events:none;width:17px;display:block;color:#fff}.mobile-sidebar__content{overflow-y:auto;flex:1 1;display:flex;flex-direction:column;align-items:center;padding:40px 15px}.mobile-sidebar .socials{position:relative;margin-top:auto;padding-top:25px;opacity:0;flex:none}.mobile-sidebar .socials__items{justify-content:center}.mobile-sidebar .socials__item{margin-left:20px;margin-right:20px;width:auto;height:auto;background:0 0}.mobile-sidebar .socials__item:hover{background:0 0}.cars__image:hover img,.most-popular__item-in:hover .most-popular__item-image img{transform:scale(1.06)}.mobile-sidebar .socials__item img,.mobile-sidebar .socials__item svg{max-width:26px;width:26px;transition:transform .25s}.mobile-sidebar .db-menu{width:100%;margin-top:auto;margin-bottom:auto;flex:none}.mobile-sidebar .db-menu>ul>li{text-align:center;position:relative;margin-bottom:40px;opacity:0}.mobile-sidebar .db-menu>ul>li>a{color:#fff;font-size:25px}.mobile-sidebar.opened{visibility:visible;pointer-events:auto}.mobile-sidebar.opened:before{opacity:1}.mobile-sidebar.opened .mobile-sidebar__container{transform:translateX(0)}.mobile-sidebar.opened .db-menu>ul>li,.mobile-sidebar.opened .socials{animation:.25s forwards fadeIn}.main-menu{background:url("img/menu-pattern.png") 0 0/auto 100% repeat-x #393a41}.main-menu>ul{display:flex;display:flex;flex-flow:row;overflow-y:visible;overflow-x:auto;-ms-overflow-style:none}.main-menu>ul::-webkit-scrollbar{display:none}.main-menu>ul>li{flex:none}.main-menu>ul>li:last-child{margin-right:0}.main-menu>ul>li.is-opened>a,.main-menu>ul>li:active>a{background:#fff;color:#000}.main-menu>ul>li a{font-size:13px;padding:0 18px 1px;font-weight:600;display:flex;align-items:center;justify-content:center;min-height:36px}.main-menu .level-2-close{position:absolute;right:20px;top:20px;width:30px;height:30px;background:url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.314 26.1426L1.79987 1.62842M26.3141 1.62842L1.7998 26.1427' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center/50% no-repeat #fff;border:1px solid #9c9c9c;border-radius:100%;z-index:1}.main-menu .level-2{position:fixed;left:0;top:0;right:0;height:100vh;height:calc(var(--vh,1vh) * 100);background:#fff;color:#000;z-index:100;overflow-y:auto;text-align:center;display:none}.cars__items,.main-menu .level-2 ul{display:flex;flex-wrap:wrap;margin-left:-10px}.intro .swiper-button-next,.intro .swiper-button-prev,.intro--choice .intro__item-title br,.intro__item+.intro__item,.main-menu .level-2 ul ul,.most-popular .swiper-slide+.swiper-slide{display:none}.main-menu .level-2 ul>li{margin-left:10px;margin-bottom:10px;width:calc(50% - 10px)}.main-menu .level-2 ul>li a{display:flex;flex-direction:column;align-items:flex-start;border:1px solid #ebebeb;border-radius:6px;color:#000;padding:10px;text-align:left;font-weight:600;font-size:15px}.main-menu .level-2 ul>li a>span{font-size:12px;font-weight:400;color:#ababab;margin-top:3px}.main-menu .level-2-in{padding-top:25px;padding-bottom:25px;overflow-y:auto;height:100%}.main-menu .level-2-box{margin-bottom:25px}.main-menu .item-name{font-size:33px;font-family:Oranienbaum;margin-bottom:10px}.main-menu .item-desc{font-weight:300;font-size:12px}.main-menu .item-image{margin-top:25px;max-width:60%;margin-left:auto;margin-right:auto}body .swiper-pagination{font-size:0;z-index:3}body .swiper-button-prev{padding-right:5px}body .swiper-button-next{padding-left:2px}body .swiper-button-next,body .swiper-button-prev{background:#fff;width:50px;height:50px;border-radius:100%;display:flex;align-items:center;justify-content:center;margin-top:0;transform:translateY(-50%);transition:box-shadow .2s}body .swiper-button-next:hover,body .swiper-button-prev:hover{box-shadow:0 0 0 5px #fff}body .swiper-button-next:after,body .swiper-button-prev:after{position:static;width:6px;height:12px;font-size:15px;font-weight:600;color:#000;line-height:12px;text-align:center}body .swiper-horizontal .swiper-pagination .swiper-pagination-bullet{margin-left:10px;margin-right:10px;margin-bottom:10px;background:#969696;opacity:1;width:4px;height:4px;position:relative}body .swiper-horizontal .swiper-pagination .swiper-pagination-bullet:before{content:'';position:absolute;left:-7px;top:-7px;right:-7px;bottom:-7px}body .swiper-horizontal .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background:#fff;box-shadow:0 0 0 3px #fff}.intro{background:#000;position:relative;overflow:hidden;-webkit-overflow-scrolling:touch}.intro__item{position:relative;color:#fff;width:100%}.intro__item.has-shadow:after{content:'';position:absolute;left:-500px;right:-500px;height:318px;background:#000;filter:blur(66px);bottom:-87px}.intro__item-image{position:absolute;left:0;top:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center}.intro__item-in{min-height:422px;padding-bottom:60px;position:relative;z-index:3;display:flex;flex-direction:column;padding-top:40px;justify-content:flex-end}.intro__item-title{font-size:28px;font-family:Oranienbaum;max-width:335px}.intro__item-title .spc{color:#a7a7a7}.intro__item .site-button{align-self:flex-start;margin-top:12px}.intro__item-text{font-size:14px;color:#a3a3a3;margin-top:13px}.intro__shadows{position:absolute;left:0;top:0;right:0;bottom:0;z-index:1;overflow:hidden;pointer-events:none;-webkit-overflow-scrolling:touch}.intro__shadows:after,.intro__shadows:before{content:'';position:absolute;border-radius:100%}.intro__shadows:before{width:992px;height:189px;background:#9298a5;filter:blur(87px);bottom:-173px;left:-686px;transform:rotate(2deg);z-index:3}.intro__shadows .shad2{z-index:2;border-radius:100%;position:absolute;width:922px;height:794px;left:-580px;bottom:-566px;background:#000;filter:blur(157px)}.intro__shadows:after{background:#000;filter:blur(157px);width:809px;height:404px;left:-578px;bottom:-174px;z-index:1}.intro .swiper-pagination{display:none;bottom:15px}.intro--choice{overflow:hidden;-webkit-overflow-scrolling:touch}.intro--choice .woocommerce-breadcrumb{padding-bottom:11px}.intro--choice .intro__item .site-button{margin-top:10px}.intro--choice .intro__item-in{display:block;min-height:0;padding-bottom:18px;padding-top:0}.intro--choice .intro__item-content{display:flex;min-height:215px;flex-direction:column;justify-content:flex-end}.intro--choice .intro__item-title{max-width:none;font-size:28px;line-height:28px}.cars__image,.intro--service{overflow:hidden;-webkit-overflow-scrolling:touch}.intro--service .intro__item{background-color:#000}.intro--service .intro__item-title{font-size:30px;line-height:30px}.intro--service .intro__item-image{-o-object-position:center top;object-position:center top}.intro--service .intro__item-in{min-height:360px;padding-bottom:60px}.intro--works .intro__item-text{max-width:75%}.intro--works .intro__item-image{-o-object-position:right 0;object-position:right 0}.site-button{display:inline-flex;justify-content:center;align-items:center;text-align:center;padding:0 26px;min-height:40px;background:#fff;color:#000;font-size:14px;font-weight:500;border:0;cursor:pointer}.site-button.type-3{background:#575757;color:#fff}.site-button:hover{background:#333;color:#fff}.site-button .svg-icon{display:block;fill:none;stroke:#fff;flex:0 0 8px;max-width:8px;width:8px;height:10px;margin-left:17px;margin-top:2px}.most-popular{padding-top:28px;padding-bottom:26px;overflow:hidden;-webkit-overflow-scrolling:touch}.most-popular .swiper-initialized .swiper-slide+.swiper-slide{display:flex}.most-popular .swiper-horizontal>.swiper-scrollbar{height:7px;border-radius:0;background:0 0;left:15px;right:15px;width:auto;bottom:0}.most-popular .swiper-scrollbar-drag{border-radius:0;background-color:#cecece}.most-popular__header{font-size:30px;line-height:1;margin-bottom:10px}.most-popular__items.swiper{margin-left:-15px;margin-right:-15px;padding-left:15px;padding-right:15px;padding-bottom:25px}.most-popular__item{display:flex;height:auto;flex:0 0 204px;max-width:204px;width:204px;margin-left:20px}.most-popular__item:first-child{margin-left:0}.most-popular__item.swiper-slide{height:auto}.most-popular__item-in{height:auto;display:block;color:#000;width:100%;border:1px solid rgba(0,0,0,.15);padding:11px 12px 25px}.most-popular__item-in:hover{color:#2e73da}.most-popular__item-image{margin-bottom:15px;display:block;overflow:hidden;-webkit-overflow-scrolling:touch}.most-popular__item-image img{display:block;width:100%;height:150px;-o-object-fit:cover;object-fit:cover;transition:transform .3s}.most-popular__item-title{display:block;font-size:12px;line-height:13px;letter-spacing:-.01em;font-weight:500}.b-modal{position:fixed;left:0;top:0;right:0;height:100vh;height:calc(var(--vh,1vh) * 100);background:rgba(0,0,0,.88);text-align:center;font-size:0;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;overflow-y:auto;padding:15px;z-index:1100;display:none;-webkit-overflow-scrolling:touch}.b-modal.opened{opacity:1;visibility:visible}.b-modal.opened .b-modal__container{opacity:1;transform:scale(1)}.b-modal:after{content:"";height:100%}.b-modal__container{background:#fff;box-shadow:0 0 30px rgba(0,0,0,.2);width:100%;max-width:757px;text-align:left;position:relative;transform:scale(.95);opacity:0;transition:transform .2s,opacity .2s;font-size:15px;padding:18px 16px 35px}.b-modal__container--gallery{background:0 0;transform:scale(1);box-shadow:none;padding:0;max-width:100%;height:auto}.b-modal__close{position:absolute;right:10px;top:8px;width:44px;height:44px;display:flex;justify-content:center;align-items:center;cursor:pointer;border:1px solid #565656;transition:background .3s,border .3s;z-index:1}.b-modal__close .svg-icon{width:16px;height:16px;pointer-events:none;fill:#fff;stroke:#fff;transition:fill .3s,stroke .3s}.b-modal__close:hover{background-color:#fff;border-color:#fff}.b-modal__close:hover .svg-icon{fill:#000;stroke:#000}.b-modal .swiper-pagination-bullets.swiper-pagination-horizontal{position:fixed;left:0;right:0;bottom:0;top:auto;display:flex}.b-modal .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet{flex:1 1;border-radius:0;width:auto;height:7px;background-color:#5b5b5b;max-width:none;opacity:1;display:block;position:relative}.b-modal .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet:after{content:'';position:absolute;left:0;top:0;bottom:0;background:#fff;width:0}.b-modal .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active:after{animation:4s linear forwards historyBullet}.woocommerce-breadcrumb{padding:14px 0;font-size:15px;line-height:17px;color:#9b9b9b}.woocommerce-breadcrumb a{font-size:15px;line-height:17px;color:#9b9b9b}.woocommerce-breadcrumb a:hover{text-decoration:underline;color:#9b9b9b}.woocommerce-breadcrumb-wrap{margin-bottom:-45px}.woocommerce-breadcrumb-wrap .woocommerce-breadcrumb{position:relative;z-index:2}.service-intro{background-color:#e3e3e3}.service-intro__container{padding-top:35px;padding-bottom:33px}.service-intro__header-text{font-size:28px;line-height:1;margin-bottom:20px}.service-intro__text{font-size:14px;line-height:17px;color:#838383;margin-bottom:41px}.service-intro__image-block{overflow:hidden;position:relative;background-color:#000;-webkit-overflow-scrolling:touch}.service-intro__image-text{font-size:12px;line-height:14px;color:#ebebeb;padding-left:14px;border-left:1px solid #fff;position:absolute;left:15px;top:19px}.service-intro__image img{display:block;height:196px;width:100%;-o-object-fit:cover;object-fit:cover}.cars{padding:23px 0 0;margin-bottom:4px}.cars__header{font-size:16px;line-height:19px;color:#000;margin-bottom:20px}.cars__item-col{flex:0 0 100%;max-width:100%;width:100%;padding-left:10px;margin-bottom:10px}.cars__item{position:relative;padding-top:13px;padding-bottom:7px;cursor:pointer;border:1px solid #dcdcdc}.cars__item.is-opened .cars__popup{opacity:1;transform:scale(1);pointer-events:auto}.cars__image img{display:block;width:100%;height:auto;transition:transform .3s}.cars__title{font-family:Oranienbaum;font-size:17px;line-height:17px;color:#000;padding:0 0 0 12px}.cars__popup{opacity:0;position:absolute;overflow:hidden;left:-1px;top:-17px;right:-1px;z-index:1;padding:22px 0 6px;background-color:#fff;box-shadow:0 24px 54px rgba(0,0,0,.09);pointer-events:none;transform:scale(.95);transition:opacity .3s,transform .3s;-webkit-overflow-scrolling:touch}.cars__popup .cars__title{margin-bottom:-1px}.choice-services__item-param:last-child,.choice-services__item-prams-group:last-child{margin-bottom:0}.cars__popup-image{margin-left:-3px;margin-bottom:10px}.cars__models{padding:0 15px 0 13px}.cars__models-row{display:flex;flex-wrap:wrap;margin-left:-7px}.cars__model-col{flex:0 0 33.333333333333336%;max-width:33.333333333333336%;width:33.333333333333336%;min-width:89px;padding-left:7px;margin-bottom:8px}.cars__model{display:block;border:1px solid #ebebeb;border-radius:4px;padding:6px 5px 4px;color:#000;transition:background-color .3s,border .3s}.cars__model:hover{background-color:#000;border-color:#000}.cars__model:hover .cars__model-title{color:#fff}.cars__model-title{display:block;font-weight:600;font-size:11px;line-height:16px;letter-spacing:-.01em;color:#000;margin-bottom:1px;transition:color .3s}.cars__model-year{display:block;font-size:10px;line-height:13px;letter-spacing:-.01em;color:#ababab;white-space:nowrap}.choice-services{margin-top:34px}.choice-services__item{border:1px solid #ccc;margin-bottom:15px;padding:10px;display:flex;flex-direction:column;position:relative}.choice-services__item.selected .choice-services__item-head:after{display:none}.choice-services__item.selected .choice-services__item-tumbler:before{left:calc(100% - 28px);background:#000}.choice-services__item.selected .choice-services__item-body{opacity:1;pointer-events:auto}.choice-services__item-head{background:rgba(217,217,217,.19);margin-bottom:25px;padding:15px;flex:1 1;cursor:pointer}.choice-services__item-head:after{content:'';position:absolute;left:0;top:0;right:0;bottom:0}.choice-services__item-tumbler{width:52px;height:24px;margin-bottom:17px;background:#d9d9d9;border-radius:10px;position:relative}.choice-services__item-tumbler:before{content:'';position:absolute;height:100%;left:0;top:0;bottom:0;width:28px;background:#fff;border-radius:10px;transition:left .3s}.choice-services__item-title{margin-bottom:11px;color:#000;font-family:Oranienbaum;font-size:22px}.choice-services__item-text{font-size:14px;color:#888}.choice-services__item-body{padding:0 20px 15px;opacity:.3;pointer-events:none;transition:opacity .3s}.choice-services__item-prams-group{margin-bottom:22px}.choice-services__item-params-title{font-size:19px;font-family:Oranienbaum;color:#000;margin-bottom:8px}.choice-services__item-param{display:flex;margin-bottom:8px;position:relative;font-size:14px;font-weight:500}.choice-services__item-param input{position:absolute;left:0;top:0;right:0;bottom:0;opacity:0;width:auto;height:auto;cursor:pointer}.choice-services__item-param input:checked+.choice-services__item-param-icon{border-color:#000}.choice-services__item-param input:checked+.choice-services__item-param-icon:before{content:'';position:absolute;left:3px;top:3px;right:3px;bottom:3px;background:#000;border-radius:100%}.choice-services__item-param-name{color:#888;padding-right:20px}.choice-services__item-param-val{margin-left:auto;color:#000}.choice-services__item-param-icon{width:17px;height:17px;border:1px solid #b6b6b6;border-radius:100%;margin-right:7px;flex:none;position:relative}.calc-page{padding-top:25px;overflow:hidden;-webkit-overflow-scrolling:touch}.calc-page__header{font-size:40px;line-height:40px;margin-top:0;margin-bottom:6px}.calc-page__text{font-size:12px;line-height:18px;color:#888}.pricelist2{background:#000;color:#919191}.pricelist2__head{margin-bottom:10px;display:flex;margin-left:-11px;flex-wrap:wrap}.pricelist2__head .i-select{margin-left:11px;width:calc(50% - 11px);max-width:280px;margin-bottom:20px}.pricelist2__in{padding-top:25px;padding-bottom:37px}.pricelist2__item{margin-bottom:51px}.pricelist2__item:last-child{margin-bottom:0}.pricelist2__item-image{position:relative;overflow:hidden;margin-bottom:11px;-webkit-overflow-scrolling:touch}.pricelist2__item-image:after{content:'';display:inline-block;padding-top:52.813%}.pricelist2__item-image:hover img{transform:scale(1.03)}.pricelist2__item-image img{position:absolute;left:0;top:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;transition:transform .3s}.pricelist2__item-title{font-size:19px;font-family:Oranienbaum;color:#fff;margin-bottom:3px}.pricelist2__item-title a{color:#fff}.pricelist2__item-text{font-size:13px}.pricelist2 .more .site-button,.pricelist2 .page-numbers li a{background:#575757}.pricelist2 .more .site-button:hover,.pricelist2 .page-numbers li a:hover{background:#737373}@media (min-width:370px){.header .socials{display:flex;padding-right:13px}}@media (min-width:375px){.cars__item-col{flex:0 0 50%;max-width:50%;width:50%}.cars__model-col{flex:0 0 50%;max-width:50%;width:50%;min-width:0}}@media (min-width:412px){.header .socials{padding-right:20px}.header .socials__item{margin-left:20px}.header .socials__item img,.header .socials__item svg{max-width:19px}}@media (min-width:414px){.header .socials{display:flex;margin-left:20px}}@media (min-width:575px){.container,.most-popular__items.swiper{padding-left:20px;padding-right:20px}.main-menu .level-2 ul li{width:calc(33.33% - 10px)}.intro--choice .intro__item-title{width:340px;max-width:100%}.most-popular .swiper-horizontal>.swiper-scrollbar{left:20px;right:20px}.most-popular__items.swiper{margin-left:-20px;margin-right:-20px}.b-modal{padding:20px}.service-intro__header-text br{display:none}.service-intro__image img{height:260px}}@media (min-width:768px){body{font-size:17px;line-height:1.3}.h1,h1{font-size:45px;margin-bottom:30px}.h2,h2{margin-bottom:42px;font-size:40px}.h3,h3{font-size:30px;margin-bottom:33px;margin-top:36px}.h4,h4{font-size:25px;margin-top:30px;margin-bottom:30px}.h5,.h6,h5,h6{font-size:20px}.main-menu{position:relative;z-index:100}.main-menu .level-2{position:absolute;top:100%;height:auto;text-align:left}.main-menu .level-2-in{display:flex}.intro__item.has-shadow:after,.main-menu .level-2-close{display:none}.main-menu .item-image{max-width:none}.main-menu .level-2-box{flex:none;margin-right:20px;width:180px;margin-bottom:0}.intro__shadows:before{width:1824px;height:498px;background:#cbd4db;opacity:.7;filter:blur(90px);left:50%;margin-left:-1553px;bottom:-512px;transform:rotate(-4.71deg)}.intro__shadows .shad2{width:1561px;height:1305px;left:50%;bottom:-512px;margin-left:-1578px;opacity:1;filter:blur(247px)}.intro__shadows:after{width:1281px;height:1071px;left:50%;margin-left:-1278px;bottom:-400px;filter:blur(187px)}.intro__shadows .shad3{position:absolute;top:-500px;bottom:-500px;width:10000px;left:50%;margin-left:-11000px;background:#000;z-index:10;filter:blur(187px)}.intro__item-image{-o-object-position:right center;object-position:right center}.intro__item-title{font-size:40px;max-width:515px}.intro__item-text{margin-top:17px}.intro--choice .intro__item-content{min-height:180px}.intro--choice .intro__item-title{width:450px}.site-button{font-size:17px;padding-left:36px;padding-right:36px;min-height:50px}.site-button .svg-icon{margin-top:2px}.most-popular{padding-top:32px;padding-bottom:52px}.most-popular__header{font-size:35px;margin-bottom:24px}.most-popular__item{flex:0 0 237px;max-width:237px;width:237px;margin-left:23px}.most-popular__item:first-child{margin-left:0}.most-popular__item-in{padding:13px 14px 15px}.most-popular__item-image{margin-bottom:18px}.most-popular__item-image img{height:174px}.most-popular__item-title{font-size:15px;line-height:15px}.b-modal__container{padding-bottom:54px}.cars__item-col,.cars__model-col{flex:0 0 33.333333333333336%;max-width:33.333333333333336%;width:33.333333333333336%}.choice-services,.pricelist2__items{display:flex;flex-wrap:wrap;margin-left:-20px}.choice-services__item{margin-left:20px;margin-bottom:20px;width:calc(50% - 20px)}.choice-services__item-body{min-height:260px}.calc-page__header{margin-bottom:6px}.pricelist2__head{margin-left:-17px}.pricelist2__head .i-select{margin-left:17px}.pricelist2__item{margin-left:20px;width:calc(50% - 20px)}}@media (min-width:992px){.h1,h1{font-size:70px}.h2,.ttl-m,h2{font-size:50px}.bl-title{font-size:60px}.header{padding-top:128px;transition:padding-top .15s;background:url("img/menu-pattern.png") 0 bottom/auto 65px}.header__content{z-index:50}.header__content-top{transition:padding-top .15s,padding-bottom .15s}.header .site-name__logo{width:24px}.header .site-name__logo-text{font-size:19px;line-height:28px}.header__burger,.mobile-sidebar{display:none}.header .db-menu{display:block;flex:1 1}.header .db-menu ul{display:flex;flex-wrap:wrap;justify-content:center}.intro--choice .intro__item-title br,.main-menu li:hover .level-2{display:block}.header .db-menu ul li{margin-left:8px;margin-right:8px}.header .db-menu ul li a{font-size:13px;text-decoration:none}.header .db-menu ul li a:hover{text-decoration:underline}.header__actions{margin-top:0;width:auto}.header__actions-item{padding-left:10px;padding-right:10px}.header .socials{order:1;padding-right:0}.header:has(.main-menu li.has-child:hover):after{content:'';position:fixed;left:0;top:0;right:0;height:100vh;height:calc(var(--vh,1vh) * 100);z-index:40;background:rgba(0,0,0,.8)}.header.doc-scrolled .header__content-top{padding-top:5px;padding-bottom:5px}.header.doc-scrolled .main-menu>ul>li>a{min-height:40px}.socials__items{margin-left:-12px}.socials__item{margin-left:12px}.main-menu>ul{flex-wrap:wrap}.main-menu>ul>li{flex-grow:1}.main-menu>ul>li>a{font-size:14px;min-height:65px;padding:0 10px;text-align:center;transition:min-height .15s}.main-menu li:hover>a{background:#fff;color:#000}.main-menu .level-2 ul{align-items:flex-start}.main-menu .level-2 ul>li{width:auto}.main-menu .level-2 ul>li:hover{border-color:#000}.main-menu .level-2 ul>li:hover a{background:#000;color:#fff}.main-menu .level-2 ul>li a{padding:8px 10px;font-size:15px;min-height:55px;min-width:112px}.main-menu .level-2 ul>li a>span{font-size:12px;margin-top:3px}.main-menu .level-2-in{padding-top:29px;padding-bottom:29px}.main-menu .level-2-box{padding-top:2px}.main-menu .item-name{font-size:37px;line-height:1}.main-menu .item-desc{font-size:13px}.main-menu .item-image{width:121px;margin:20px 0 0}body .swiper-pagination{margin-bottom:14px}body .swiper-horizontal .swiper-pagination .swiper-pagination-bullet{margin-left:13px;margin-right:13px;margin-bottom:13px}.intro__item-in{padding-bottom:127px;min-height:584px}.intro__item-image{-o-object-position:center right;object-position:center right}.intro__item .site-button{margin-top:26px}.intro.swiper-initialized .swiper-button-next{display:flex;right:41px}.intro--choice .intro__item-image{-o-object-position:right bottom;object-position:right bottom}.intro--choice .intro__item-in{padding-bottom:47px}.intro--choice .intro__item-content{min-height:0}.intro--choice .intro__item-title{width:1170px;font-size:70px;line-height:70px;margin-bottom:20px}.intro--service .intro__item-title{font-size:70px;line-height:70px;width:710px;max-width:100%}.intro--service .intro__item-image{-o-object-position:right bottom;object-position:right bottom}.intro--service .intro__item-in{min-height:440px;display:block;padding-bottom:40px;padding-top:106px}.intro--works .intro__item-text{max-width:503px;min-height:217px}.b-modal__close{right:57px;top:41px;width:66px;height:66px}.b-modal__close .svg-icon{width:25px;height:25px}.b-modal .swiper-pagination-bullets.swiper-pagination-horizontal{bottom:44px;flex-wrap:wrap;justify-content:center}.b-modal .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet{height:5px;flex:0 0 117px;max-width:117px;width:117px}.woocommerce-breadcrumb{padding:25px 0}.woocommerce-breadcrumb-wrap{margin-bottom:-70px}.woocommerce-breadcrumb-wrap .woocommerce-breadcrumb{top:39px}.service-intro__container{padding-top:74px;padding-bottom:57px}.service-intro__row{display:flex;margin-bottom:49px}.service-intro__header{flex:0 0 50%;max-width:50%;width:50%}.service-intro__header-text{font-size:60px;margin-bottom:0;width:508px;max-width:100%}.service-intro__content{flex:0 0 50%;max-width:50%;width:50%;padding-left:20px;padding-top:18px}.service-intro__text{font-size:17px;line-height:20px;margin-bottom:0;width:530px;max-width:100%}.service-intro__image-text{font-size:17px;line-height:20px;top:26px;left:30px}.service-intro__image img{height:376px;width:auto}.cars{padding:51px 0 0;margin-bottom:61px}.cars__header{font-size:16px;line-height:19px;margin-bottom:56px}.cars__items{margin-left:-20px}.cars__item-col{flex:0 0 25%;max-width:25%;width:25%;padding-left:20px;margin-bottom:20px}.cars__item{padding-top:23px;padding-bottom:19px}.cars__title{font-size:24px;line-height:24px;padding-left:21px}.cars__popup-image{padding-left:5px;margin-left:0;margin-bottom:19px}.cars__model-col{min-width:89px}.cars__model{padding:6px 3px 4px 11px}.cars__model-title{font-size:13px}.cars__model-year{font-size:11px}.choice-services{margin-top:34px}.calc-page{padding-top:41px}.calc-page__header{margin-bottom:0;font-size:70px;line-height:70px}.calc-page__text{font-size:15px;line-height:23px}.pricelist2__head{margin-bottom:10px}.pricelist2__in{padding-top:30px;padding-bottom:55px}.pricelist2__items{margin-left:-40px;margin-bottom:-66px}.pricelist2__item,.pricelist2__item:last-child{margin-bottom:66px}.pricelist2__item{margin-left:40px;width:calc(50% - 40px)}.pricelist2__item-image{margin-bottom:20px}.pricelist2__item-image:after{padding-top:55%}.pricelist2__item-title{font-size:32px;margin-bottom:25px}.pricelist2__item-text{font-size:18px}}@media (min-width:1200px){.container{padding-left:60px;padding-right:60px}.header{padding-top:142px}.header__content-top{padding-top:18px;padding-bottom:18px}.header .site-name__logo{width:41px;margin-right:19px;margin-top:0}.header .site-name__logo-text{font-size:33px;padding-top:5px}.header .site-name__desc{font-size:12px;width:146px}.header .db-menu ul li a{font-size:14px}.header .socials__item img,.header .socials__item svg{max-width:24px}.main-menu>ul>li{flex:none;flex-grow:1}.main-menu>ul>li>a{padding-left:14px;padding-right:14px;font-size:17px;min-width:38px}.main-menu .level-2 ul li a{padding-left:17px;padding-right:17px}.main-menu .level-2-box{width:230px;padding-left:18px}.intro__item-title{font-size:60px;max-width:780px}.most-popular .swiper-horizontal>.swiper-scrollbar{left:0;right:0}.most-popular__items.swiper{margin-left:0;margin-right:0;padding-left:0;padding-right:0}.cars__item-col{flex:0 0 20%;max-width:20%;width:20%}.cars__model-col{flex:0 0 50%;max-width:50%;width:50%;min-width:0}}@media (min-width:1366px){.header{padding-top:151px}.header__actions-item{font-size:14px;min-height:50px;margin-left:14px;padding-left:13px;padding-right:13px}.header .db-menu ul li a,.header__actions-item--phone{font-size:17px}.header__actions-item .svg-icon{width:18px;height:22px;margin-right:14px}.header .socials__item{margin-left:27px}.choice-services__item{width:calc(25% - 20px)}}@media (min-width:1440px){.header__actions-item{padding-left:22px;padding-right:22px}.cars__model-col{flex:0 0 33.333333333333336%;max-width:33.333333333333336%;width:33.333333333333336%}}@media (min-width:1600px){.header .db-menu ul li{margin-left:24px;margin-right:24px}.intro--service .intro__item-image{left:auto;max-width:1600px;right:0}.most-popular__items-in{display:flex;justify-content:space-between}.most-popular__item{flex-grow:0;flex-shrink:0;flex-basis:calc(100% / 6 - 20px);max-width:calc(100% / 6 - 20px);width:calc(100% / 6 - 20px);margin:0}}@media (min-width:1920px){.intro--choice .intro__item-image{-o-object-position:right 89%;object-position:right 89%}}
+        </style>
+
+        
+
+
+    </head>
+
+    <body class="app">
+
+        <div class="app__wrapper">
+
+            <div class="mobile-sidebar">
+    <div class="mobile-sidebar__container">
+        <div class="mobile-sidebar__header">
+            <a title="На главную" href="index.html" class="site-name">
+    <img width="41" height="41" src="img/logo.svg" alt="" class="site-name__logo">
+    <span class="site-name__logo-text">MB-YUG</span>
+    <span class="site-name__desc">
+        Ремонт и обслуживание
+        Mercedes-Benz
+    </span>
+</a><!-- site-name -->
+
+            <div class="mobile-sidebar__close js-menu">
+      <span class="svg-icon svg-icon--close" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#close"></use>
+        </svg>
+      </span>
+    </div>
+        </div>
+        <div class="mobile-sidebar__content">
+            <nav class="db-menu">
+    <ul>
+        <li><a href="choice-car.html">Автомобили</a></li>
+        <li><a href="service-view.html">Услуги</a></li>
+        <li><a href="works.html">Техцентр</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</nav><!-- db-menu -->
+
+            <div class="socials">
+    <div class="socials__items">
+        
+        <a href="#" title="Telegram" class="socials__item">
+            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.349429 8.39769C3.9916 6.74267 14.5983 1.95307 19.7871 0.0893977C20.5699 -0.190391 21.4291 0.207952 21.7108 0.985669C21.7967 1.22278 21.8206 1.47411 21.7824 1.72071L19.4577 16.7629C19.3193 17.6639 18.4743 18.2851 17.5626 18.1476C17.3287 18.1144 17.1091 18.029 16.9086 17.901L10.1828 13.5809C9.38564 13.0687 9.16128 12.016 9.67204 11.224C9.74842 11.1055 9.84389 10.9917 9.95368 10.8968L16.1544 4.99281C16.417 4.74147 16.0781 4.3289 15.7773 4.53756L6.94161 10.6787C6.11102 11.2572 5.04654 11.3758 4.10616 11.0011L0.373297 9.49313C0.0677939 9.36984 -0.0801841 9.02366 0.0439265 8.72016C0.101208 8.57315 0.210998 8.45934 0.349429 8.39769Z" fill="#4ac6ff"></path>
+            </svg>
+        </a>
+        <a href="#" title="Whatsapp" class="socials__item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 0C4.725 0 0 4.725 0 10.5C0 12.5125 0.525 14.35 1.4875 15.925L0.0875 21L5.3375 19.6C6.825 20.475 8.6625 21 10.5 21C16.275 21 21 16.275 21 10.5C21 4.725 16.275 0 10.5 0ZM6.9125 5.6C7.0875 5.6 7.2625 5.6 7.4375 5.6C7.6125 5.6 7.7875 5.6 8.05 6.0375C8.225 6.5625 8.75 7.875 8.75 7.9625C8.75 8.05 8.8375 8.225 8.75 8.4C8.75 8.575 8.6625 8.75 8.575 8.8375C8.4875 9.0125 8.3125 9.1875 8.225 9.275C8.05 9.45 7.875 9.625 8.05 9.8875C8.225 10.15 8.75 11.025 9.5375 11.725C10.5 12.6 11.375 12.8625 11.6375 13.0375C11.9 13.125 12.075 13.125 12.1625 12.95C12.3375 12.775 12.775 12.1625 12.95 11.9C13.125 11.6375 13.3 11.725 13.5625 11.8125C13.825 11.9 15.05 12.5125 15.3125 12.6875C15.575 12.8625 15.75 12.8625 15.8375 12.95C15.925 13.0375 15.925 13.5625 15.6625 14.175C15.4875 14.7875 14.35 15.4 13.9125 15.4C13.475 15.4875 12.95 15.575 10.7625 14.7875C8.1375 13.7375 6.475 11.025 6.3 10.85C6.2125 10.675 5.25 9.45 5.25 8.1375C5.25 6.825 5.95 6.2125 6.125 5.95C6.475 5.6875 6.7375 5.6 6.9125 5.6Z" fill="#26e94e"></path>
+            </svg>
+        </a>
+    </div>
+</div><!-- socials -->
+
+        </div>
+    </div>
+</div><!-- mobile-sidebar -->
+
+
+            
+            	<header class="header">
+    <div class="header__in">
+        <div class="header__content">
+            <div class="header__content-top container">
+                <a title="На главную" href="index.html" class="site-name">
+    <img width="41" height="41" src="img/logo.svg" alt="" class="site-name__logo">
+    <span class="site-name__logo-text">MB-YUG</span>
+    <span class="site-name__desc">
+        Ремонт и обслуживание
+        Mercedes-Benz
+    </span>
+</a><!-- site-name -->
+
+                <div class="socials">
+    <div class="socials__items">
+        
+        <a href="#" title="Telegram" class="socials__item">
+            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.349429 8.39769C3.9916 6.74267 14.5983 1.95307 19.7871 0.0893977C20.5699 -0.190391 21.4291 0.207952 21.7108 0.985669C21.7967 1.22278 21.8206 1.47411 21.7824 1.72071L19.4577 16.7629C19.3193 17.6639 18.4743 18.2851 17.5626 18.1476C17.3287 18.1144 17.1091 18.029 16.9086 17.901L10.1828 13.5809C9.38564 13.0687 9.16128 12.016 9.67204 11.224C9.74842 11.1055 9.84389 10.9917 9.95368 10.8968L16.1544 4.99281C16.417 4.74147 16.0781 4.3289 15.7773 4.53756L6.94161 10.6787C6.11102 11.2572 5.04654 11.3758 4.10616 11.0011L0.373297 9.49313C0.0677939 9.36984 -0.0801841 9.02366 0.0439265 8.72016C0.101208 8.57315 0.210998 8.45934 0.349429 8.39769Z" fill="#4ac6ff"></path>
+            </svg>
+        </a>
+        <a href="#" title="Whatsapp" class="socials__item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 0C4.725 0 0 4.725 0 10.5C0 12.5125 0.525 14.35 1.4875 15.925L0.0875 21L5.3375 19.6C6.825 20.475 8.6625 21 10.5 21C16.275 21 21 16.275 21 10.5C21 4.725 16.275 0 10.5 0ZM6.9125 5.6C7.0875 5.6 7.2625 5.6 7.4375 5.6C7.6125 5.6 7.7875 5.6 8.05 6.0375C8.225 6.5625 8.75 7.875 8.75 7.9625C8.75 8.05 8.8375 8.225 8.75 8.4C8.75 8.575 8.6625 8.75 8.575 8.8375C8.4875 9.0125 8.3125 9.1875 8.225 9.275C8.05 9.45 7.875 9.625 8.05 9.8875C8.225 10.15 8.75 11.025 9.5375 11.725C10.5 12.6 11.375 12.8625 11.6375 13.0375C11.9 13.125 12.075 13.125 12.1625 12.95C12.3375 12.775 12.775 12.1625 12.95 11.9C13.125 11.6375 13.3 11.725 13.5625 11.8125C13.825 11.9 15.05 12.5125 15.3125 12.6875C15.575 12.8625 15.75 12.8625 15.8375 12.95C15.925 13.0375 15.925 13.5625 15.6625 14.175C15.4875 14.7875 14.35 15.4 13.9125 15.4C13.475 15.4875 12.95 15.575 10.7625 14.7875C8.1375 13.7375 6.475 11.025 6.3 10.85C6.2125 10.675 5.25 9.45 5.25 8.1375C5.25 6.825 5.95 6.2125 6.125 5.95C6.475 5.6875 6.7375 5.6 6.9125 5.6Z" fill="#26e94e"></path>
+            </svg>
+        </a>
+    </div>
+</div><!-- socials -->
+
+                <div class="header__burger js-menu">
+      <span class="svg-icon svg-icon--menu" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#menu"></use>
+        </svg>
+      </span>
+    </div>
+                <nav class="db-menu">
+    <ul>
+        <li><a href="choice-car.html">Автомобили</a></li>
+        <li><a href="service-view.html">Услуги</a></li>
+        <li><a href="works.html">Техцентр</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</nav><!-- db-menu -->
+
+                <div class="header__actions">
+                    <a href="tel:88009230023" class="header__actions-item header__actions-item--phone">
+                        8 800 923 00 23
+                    </a>
+                    <div class="header__actions-item">
+                        
+      <span class="svg-icon svg-icon--location" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#location"></use>
+        </svg>
+      </span>
+    
+                        <div>Москва, Дорожная ул, 10</div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <nav class="main-menu">
+    <ul class="container">
+        <li><a href="#">A</a></li>
+        <li><a href="#">B</a></li>
+        <li>
+            <a href="#">C</a>
+            <div class="level-2">
+                <div class="level-2-close"></div>
+                <div class="level-2-in container">
+                    <div class="level-2-box">
+                        <div class="item-name">C-class</div>
+                        <div class="item-desc">Выберете модификацию</div>
+                        <div class="item-image">
+                            <img loading="lazy" width="127" height="53" src="files/mn-image.jpg" alt="">
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#">W206 <span>2021-2023</span></a></li>
+                        <li><a href="#">W205 <span>2018-2021</span></a></li>
+                        <li><a href="#">W205 <span>2014-2018</span></a></li>
+                        <li><a href="#">W204 <span>2011-2015</span></a></li>
+                        <li><a href="#">W204 <span>2006-2011</span></a></li>
+                        <li><a href="#">W203 <span>2004-2008</span></a></li>
+                        <li><a href="#">W203 <span>2000-2004</span></a></li>
+                        <li><a href="#">W202 <span>1997-2001</span></a></li>
+                        <li><a href="#">W2002 <span>1993-1997</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li><a href="#">CLA</a></li>
+        <li><a href="#">CLS</a></li>
+        <li><a href="#">E</a></li>
+        <li><a href="#">G</a></li>
+        <li><a href="#">GL</a></li>
+        <li><a href="#">GLA</a></li>
+        <li><a href="#">GLB</a></li>
+        <li><a href="#">GLC</a></li>
+        <li><a href="#">GLE</a></li>
+        <li><a href="#">GLK</a></li>
+        <li><a href="#">GLS</a></li>
+        <li><a href="#">Maybach</a></li>
+        <li><a href="#">ML</a></li>
+        <li><a href="#">R</a></li>
+        <li><a href="#">S</a></li>
+        <li><a href="#">SL</a></li>
+        <li><a href="#">V</a></li>
+    </ul>
+</nav><!-- main-menu -->
+
+    </div>
+</header><!-- header -->
+
+            
+
+            <div class="app__content">
+
+                <main class="app__main">
+                    
+
+	<div class="calc-page">
+		<div class="calc-page__container container">
+			<div class="calc-page__header h1">Калькулятор ТО</div>
+			<div class="calc-page__text">Узнайте стоимость облуживания за пару кликов</div>
+
+			<div class="calc-model">
+				<div class="calc-model__groups">
+					<div class="calc-model__group">
+						<div class="calc-model__header">Выберите модель</div>
+						<div class="calc-model__select js-calc-moodel-select">
+							<div class="calc-model__renderer">
+								<div class="calc-model__renderer-title">A-class</div>
+								<div class="calc-model__renderer-arrow">
+									
+      <span class="svg-icon svg-icon--chevron-down" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#chevron-down"></use>
+        </svg>
+      </span>
+    
+								</div>
+							</div>
+							<div class="calc-model__list">
+								<div class="calc-model__item is-active" data-short-title="A">A-class</div>
+								<div data-short-title="B" class="calc-model__item">B-class</div>
+								<div data-short-title="C" class="calc-model__item">C-class</div>
+								<div data-short-title="CLA" class="calc-model__item">CLA-class</div>
+								<div data-short-title="CLS" class="calc-model__item">CLS-class</div>
+								<div data-short-title="E" class="calc-model__item">E-class</div>
+								<div data-short-title="G" class="calc-model__item">G-class</div>
+								<div data-short-title="GL" class="calc-model__item">GL-class</div>
+								<div data-short-title="GLA" class="calc-model__item">GLA-class</div>
+								<div data-short-title="GLB" class="calc-model__item">GLB-class</div>
+								<div data-short-title="GLC" class="calc-model__item">GLC-class</div>
+								<div data-short-title="GLE" class="calc-model__item">GLE-class</div>
+								<div data-short-title="GLK" class="calc-model__item">GLK-class</div>
+								<div data-short-title="GLS" class="calc-model__item">GLS-class</div>
+								<div data-short-title="Maybach" class="calc-model__item">Maybach</div>
+								<div data-short-title="ML" class="calc-model__item">ML-class</div>
+								<div data-short-title="R" class="calc-model__item">R-class</div>
+								<div data-short-title="S" class="calc-model__item">S-class</div>
+								<div data-short-title="SL" class="calc-model__item">SL-class</div>
+								<div data-short-title="V" class="calc-model__item">V-class</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="calc-model__group">
+						<div class="calc-model__header">Год выпуска</div>
+						<div class="calc-model__select js-calc-moodel-select">
+							<div class="calc-model__renderer">
+								<div class="calc-model__renderer-title">2005 - 2006</div>
+								<div class="calc-model__renderer-arrow">
+									
+      <span class="svg-icon svg-icon--chevron-down" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#chevron-down"></use>
+        </svg>
+      </span>
+    
+								</div>
+							</div>
+							<div class="calc-model__list">
+								<div class="calc-model__item is-active">2005 - 2006</div>
+								<div class="calc-model__item">2007 - 2012</div>
+								<div class="calc-model__item">2012 - 2019</div>
+								<div class="calc-model__item">2019 - 2022</div>
+								<div class="calc-model__item">2023</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="calc-model__group">
+						<div class="calc-model__header">Тип двигателя</div>
+						<div class="calc-model__select js-calc-moodel-select">
+							<div class="calc-model__renderer">
+								<div class="calc-model__renderer-title">1.8</div>
+								<div class="calc-model__renderer-arrow">
+									
+      <span class="svg-icon svg-icon--chevron-down" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#chevron-down"></use>
+        </svg>
+      </span>
+    
+								</div>
+							</div>
+							<div class="calc-model__list">
+								<div class="calc-model__item is-active">1.8</div>
+								<div class="calc-model__item">2.0</div>
+								<div class="calc-model__item">3.0</div>
+								<div class="calc-model__item">5.5 AMG</div>
+								<div class="calc-model__item">6.3 AMG</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc-model__car-header">Mercededs Benz C-class 2019-2022 2.0i</div>
+
+				<div class="calc-model__car">
+					<div class="calc-model__car-line">
+						<div style="width: 20%" class="calc-model__car-progress"></div>
+						<div style="left: 20%" class="calc-model__car-thumb">
+							<div class="calc-model__car-thumb-in">
+								
+      <span class="svg-icon svg-icon--chevron-left" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#chevron-left"></use>
+        </svg>
+      </span>
+    
+								<div class="calc-model__car-thumb-image">
+									<img loading="lazy" width="200" height="62" src="img/car-line-thumb.png" alt="">
+								</div>
+								
+      <span class="svg-icon svg-icon--chevron-right" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </span>
+    
+								<div class="calc-model__car-thumb-text">Будующее</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc-model__total">
+					<div class="calc-model__total-headline">
+						<div class="calc-model__total-header">Стоимость ТО</div>
+						<div class="calc-model__total-price">1,299,000 руб.</div>
+					</div>
+
+					<div class="calc-model__total-text">Стоимость работ и запчастей может отличаться от указанных в таблице, уточняйте цену у мастера приемщика</div>
+
+					<a href="#form" class="site-button js-modal-trigger type-2">Оставить заявку 
+      <span class="svg-icon svg-icon--arrow-right3" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#arrow-right3"></use>
+        </svg>
+      </span>
+    </a>
+				</div>
+			</div><!-- calc-model -->
+		</div>
+	</div>
+
+
+                </main><!-- app:main -->
+
+            </div><!-- app:content -->
+
+            
+
+            
+	<div data-modal="form" class="b-modal">
+    <div class="b-modal__close js-modal-trigger js-close">
+      <span class="svg-icon svg-icon--close-croos" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#close-croos"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="b-modal__container">
+    	<div class="popup-form">
+    		<div class="popup-form__header">
+    			<img loading="lazy" width="726" height="174" src="img/popup-form-pic.jpg" alt="" class="popup-form__image">
+    			<div class="popup-form__header-text">Запись на <br>сервисный прием</div>
+    		</div>
+
+    		<div class="popup-form__content">
+    			<form action="#" class="c-form">
+    				<div class="c-form__text">Заполните форму или оперативно свяжитесь с нами через мессенджеры</div>
+    				<div class="c-form__item"><input type="text" placeholder="Ваше имя"></div>
+    				<div class="c-form__item"><input type="tel" required="" placeholder="Контактный телефон"></div>
+    				<div class="agreement">
+    <label>
+        <span class="checkbox">
+            <input type="checkbox" required="">
+            <span></span>
+        </span>
+        <span>Я согласен с правилами обеспечения <a href="#">политики приватности</a> и <a href="#">условиями публичной оферты</a></span>
+    </label>
+</div><!-- agreement -->
+
+    				<div class="c-form__buttons">
+    				    <button type="submit" class="site-button type-2">Записаться</button>
+    				    <div class="socials">
+    <div class="socials__items">
+        
+        <a href="#" title="Telegram" class="socials__item">
+            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.349429 8.39769C3.9916 6.74267 14.5983 1.95307 19.7871 0.0893977C20.5699 -0.190391 21.4291 0.207952 21.7108 0.985669C21.7967 1.22278 21.8206 1.47411 21.7824 1.72071L19.4577 16.7629C19.3193 17.6639 18.4743 18.2851 17.5626 18.1476C17.3287 18.1144 17.1091 18.029 16.9086 17.901L10.1828 13.5809C9.38564 13.0687 9.16128 12.016 9.67204 11.224C9.74842 11.1055 9.84389 10.9917 9.95368 10.8968L16.1544 4.99281C16.417 4.74147 16.0781 4.3289 15.7773 4.53756L6.94161 10.6787C6.11102 11.2572 5.04654 11.3758 4.10616 11.0011L0.373297 9.49313C0.0677939 9.36984 -0.0801841 9.02366 0.0439265 8.72016C0.101208 8.57315 0.210998 8.45934 0.349429 8.39769Z" fill="#4ac6ff"></path>
+            </svg>
+        </a>
+        <a href="#" title="Whatsapp" class="socials__item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 0C4.725 0 0 4.725 0 10.5C0 12.5125 0.525 14.35 1.4875 15.925L0.0875 21L5.3375 19.6C6.825 20.475 8.6625 21 10.5 21C16.275 21 21 16.275 21 10.5C21 4.725 16.275 0 10.5 0ZM6.9125 5.6C7.0875 5.6 7.2625 5.6 7.4375 5.6C7.6125 5.6 7.7875 5.6 8.05 6.0375C8.225 6.5625 8.75 7.875 8.75 7.9625C8.75 8.05 8.8375 8.225 8.75 8.4C8.75 8.575 8.6625 8.75 8.575 8.8375C8.4875 9.0125 8.3125 9.1875 8.225 9.275C8.05 9.45 7.875 9.625 8.05 9.8875C8.225 10.15 8.75 11.025 9.5375 11.725C10.5 12.6 11.375 12.8625 11.6375 13.0375C11.9 13.125 12.075 13.125 12.1625 12.95C12.3375 12.775 12.775 12.1625 12.95 11.9C13.125 11.6375 13.3 11.725 13.5625 11.8125C13.825 11.9 15.05 12.5125 15.3125 12.6875C15.575 12.8625 15.75 12.8625 15.8375 12.95C15.925 13.0375 15.925 13.5625 15.6625 14.175C15.4875 14.7875 14.35 15.4 13.9125 15.4C13.475 15.4875 12.95 15.575 10.7625 14.7875C8.1375 13.7375 6.475 11.025 6.3 10.85C6.2125 10.675 5.25 9.45 5.25 8.1375C5.25 6.825 5.95 6.2125 6.125 5.95C6.475 5.6875 6.7375 5.6 6.9125 5.6Z" fill="#26e94e"></path>
+            </svg>
+        </a>
+    </div>
+</div><!-- socials -->
+
+    				</div>
+    			</form>
+    		</div>
+    	</div><!-- popup-form -->
+    </div>
+</div><!-- b-popup -->
+
+
+<div data-modal="history" class="b-modal">
+    <div class="b-modal__close js-stop-history-slider js-modal-trigger js-close">
+      <span class="svg-icon svg-icon--close-croos" aria-hidden="true">
+        <svg class="svg-icon__link">
+          <use xlink:href="#close-croos"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="b-modal__container b-modal__container--gallery">
+		<div class="stories">
+	<div class="stories__slider swiper js-stories-slider">
+		<div class="stories__items swiper-wrapper">
+			<div class="stories__slide swiper-slide">
+				<div class="stories__item">
+					<img loading="lazy" width="580" height="677" src="files/stories-pic1.jpg" alt="" class="stories__image">
+					<div class="stories__title">Детейлинг в нашем <br>центре</div>
+					<div class="stories__text">В период до 1 сентября детейлинг салона со скидкой</div>
+				</div>
+			</div>
+			<div class="stories__slide swiper-slide">
+				<div class="stories__item">
+					<img loading="lazy" width="580" height="677" src="files/stories-pic2.jpg" alt="" class="stories__image">
+					<div class="stories__title">Диагностика авто <br>в подарок</div>
+					<div class="stories__text">В период до 2 сентября детейлинг салона со скидкой</div>
+				</div>
+			</div>
+			<div class="stories__slide swiper-slide">
+				<div class="stories__item">
+					<img loading="lazy" width="580" height="677" src="files/stories-pic1.jpg" alt="" class="stories__image">
+					<div class="stories__title">Акция на замену <br>масла</div>
+					<div class="stories__text">В период до 10 сентября детейлинг салона со скидкой</div>
+				</div>
+			</div>
+			<div class="stories__slide swiper-slide">
+				<div class="stories__item">
+					<img loading="lazy" width="580" height="677" src="files/stories-pic2.jpg" alt="" class="stories__image">
+					<div class="stories__title">Детейлинг в нашем <br>центре</div>
+					<div class="stories__text">В период до 8 сентября детейлинг салона со скидкой</div>
+				</div>
+			</div>
+			<div class="stories__slide swiper-slide">
+				<div class="stories__item">
+					<img loading="lazy" width="580" height="677" src="files/stories-pic1.jpg" alt="" class="stories__image">
+					<div class="stories__title">Обслужвание Mercedes-Benz <br>EQS серии</div>
+					<div class="stories__text">В период до 15 сентября детейлинг салона со скидкой</div>
+				</div>
+			</div>
+			<div class="stories__slide swiper-slide">
+				<div class="stories__item">
+					<img loading="lazy" width="580" height="677" src="files/stories-pic2.jpg" alt="" class="stories__image">
+					<div class="stories__title">Сервисное обслуживание <br>всех моделей</div>
+					<div class="stories__text">В период до 21 сентября детейлинг салона со скидкой</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- stories -->
+
+    </div>
+    <div class="swiper-history-pagination swiper-pagination"></div>
+</div><!-- b-popup -->
+
+
+        </div><!-- app:wrapper -->
+
+        <button id="back_to" type="button" aria-label="В начало страницы" title="В начало страницы" class="page-scroller">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" class="page-scroller__icon">
+		<path d="M2.582 13.891c-0.272 0.268-0.709 0.268-0.979 0s-0.271-0.701 0-0.969l7.908-7.83c0.27-0.268 0.707-0.268 0.979 0l7.908 7.83c0.27 0.268 0.27 0.701 0 0.969s-0.709 0.268-0.978 0l-7.42-7.141-7.418 7.141z"></path>
+	</svg>
+</button><!-- page-scroller -->
+
+
+		<svg class="main-svg-sprite main-svg-sprite--icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 8 14" id="arrow-left2" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7l6 6"></path></symbol><symbol viewBox="0 0 6 10" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M1.69 1.434l3.5 3.5-3.5 3.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></symbol><symbol viewBox="0 0 5 9" id="arrow-right2" xmlns="http://www.w3.org/2000/svg"><path d="M1.034 1.293L4.542 4.8 1.034 8.31"></path></symbol><symbol viewBox="0 0 5 8" id="arrow-right3" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l3 3-3 3"></path></symbol><symbol viewBox="0 0 11 6" id="chevron-down" xmlns="http://www.w3.org/2000/svg"><path d="M10 .614l-4.5 4.5L1 .614"></path></symbol><symbol viewBox="0 0 6 10" id="chevron-left" xmlns="http://www.w3.org/2000/svg"><path d="M5 1L1 5l4 4"></path></symbol><symbol viewBox="0 0 6 10" id="chevron-right" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4-4 4"></path></symbol><symbol viewBox="0 0 13.97 13.97" id="close" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M14 1.41L8.39 7 14 12.56 12.56 14 7 8.39 1.41 14 0 12.56 5.58 7 0 1.41 1.41 0 7 5.58 12.56 0z" data-name="Layer 1"></path></g></symbol><symbol viewBox="0 0 19 19" id="close-croos" xmlns="http://www.w3.org/2000/svg"><path d="M17.543 17.428L1.2 1.087m16.343 0L1.2 17.429"></path></symbol><symbol viewBox="0 0 18 22" id="location" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M4.54 1.204a8.858 8.858 0 019.045.075c2.756 1.713 4.43 4.77 4.415 8.057-.064 3.267-1.86 6.337-4.105 8.71a24.074 24.074 0 01-4.318 3.626 1.51 1.51 0 01-.524.185 1.055 1.055 0 01-.502-.152 23.805 23.805 0 01-6.22-5.847A11.93 11.93 0 010 9.173c-.002-3.294 1.732-6.336 4.54-7.969zm1.624 9.332a3.057 3.057 0 002.825 1.925c.81.006 1.59-.319 2.164-.902a3.122 3.122 0 00.893-2.201 3.115 3.115 0 00-1.88-2.885 3.016 3.016 0 00-3.335.668 3.156 3.156 0 00-.667 3.395z"></path></symbol><symbol viewBox="0 0 32 16" id="menu" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h32v2H0zM0 7h32v2H0zM0 14h32v2H0z"></path></symbol><symbol viewBox="0 0 22 22" id="phone" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M10.482 11.522c4.41 4.408 5.41-.691 8.217 2.114 2.706 2.706 4.262 3.248.833 6.675-.43.346-3.159 4.498-12.749-5.09-9.592-9.588-5.441-12.32-5.096-12.75C5.124-.965 5.657.6 8.363 3.305c2.808 2.807-2.29 3.81 2.12 8.218z"></path></symbol><symbol viewBox="0 0 21.42 21.42" id="search" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M13.43 15.43a8.49 8.49 0 112-2L21 19a1.39 1.39 0 010 2 1.39 1.39 0 01-2 0l-5.58-5.58zM8.5 15A6.5 6.5 0 102 8.5 6.5 6.5 0 008.5 15z" data-name="Layer 1"></path></g></symbol></svg><svg class="main-svg-sprite main-svg-sprite--colored" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="marmelad" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><style>.ast6{fill:#fff}</style><path fill="#f7e018" d="M272 274.8c-37.5 0-67.9-30.4-67.9-67.9 0-31.4-25.6-57-57-57-37.5 0-67.9-30.4-67.9-67.9s30.4-67.9 67.9-67.9c106.3 0 192.8 86.5 192.8 192.8 0 37.5-30.4 67.9-67.9 67.9z"></path><path fill="#1988c6" d="M243.8 394.9c0-37.5 30.4-67.9 67.9-67.9 31.4 0 57-25.6 57-57 0-37.5 30.4-67.9 67.9-67.9s67.9 30.4 67.9 67.9c0 106.3-86.5 192.8-192.8 192.8-37.5 0-67.9-30.4-67.9-67.9z"></path><path fill="#f16524" d="M133.5 200.3c31.3 20.7 39.9 62.8 19.2 94.1-17.3 26.2-10.1 61.6 16.1 79 31.3 20.7 39.9 62.8 19.2 94.1s-62.8 39.9-94.1 19.2C5.2 427.9-19.2 308.1 39.4 219.5c20.7-31.3 62.8-39.9 94.1-19.2z"></path><path fill="#e5cd1a" d="M234.1 206.9c0-31.4-25.6-57-57-57-37.5 0-67.9-30.4-67.9-67.9 0-33.7 24.5-61.7 56.7-67-6.2-.6-12.5-.9-18.8-.9-37.5 0-67.9 30.4-67.9 67.9s30.4 67.9 67.9 67.9c31.4 0 57 25.6 57 57 0 37.5 30.4 67.9 67.9 67.9 5.2 0 10.2-.6 15-1.7-30.3-6.8-52.9-33.8-52.9-66.2z"></path><path fill="#1c73ba" d="M273.8 394.9c0-37.5 30.4-67.9 67.9-67.9 31.4 0 57-25.6 57-57 0-32.3 22.6-59.4 52.9-66.2-4.8-1.1-9.8-1.7-15-1.7-37.5 0-67.9 30.4-67.9 67.9 0 31.4-25.6 57-57 57-37.5 0-67.9 30.4-67.9 67.9s30.4 67.9 67.9 67.9c6.4 0 12.6-.3 18.8-.9-32.1-5.3-56.7-33.3-56.7-67z"></path><path fill="#e54c21" d="M123.9 486.6C35.2 427.9 10.8 308.1 69.4 219.5c10.1-15.2 25.2-25.1 41.7-28.8-26.8-6.1-55.7 4.5-71.7 28.8C-19.2 308.2 5.2 428 93.9 486.6c16.1 10.6 35 13.5 52.4 9.6-7.8-1.8-15.4-5-22.4-9.6z"></path><path d="M347.4 206.9c0-110.4-89.8-200.3-200.3-200.3-41.6 0-75.4 33.8-75.4 75.4s33.8 75.4 75.4 75.4c27.3 0 49.5 22.2 49.5 49.5 0 41.6 33.8 75.4 75.4 75.4 41.6 0 75.4-33.8 75.4-75.4zm-135.8 0c0-35.6-28.9-64.5-64.5-64.5-33.3 0-60.4-27.1-60.4-60.4s27.1-60.4 60.4-60.4c102.2 0 185.3 83.1 185.3 185.3 0 33.3-27.1 60.4-60.4 60.4s-60.4-27.1-60.4-60.4z"></path><path d="M120.7 82h-15c0 22.9 18.6 41.4 41.4 41.4 17.7 0 34.7 5.5 49 15.9l8.8-12.1c-16.9-12.3-36.9-18.8-57.8-18.8-14.5.1-26.4-11.8-26.4-26.4zm186.7 80.2c-12.8-45.8-44.8-84.1-87.7-105l-6.6 13.5c39.1 19 68.2 53.8 79.8 95.5l14.5-4zM190.9 62.1c4.5 1.4 9.1 3 13.5 4.8l5.7-13.9c-4.8-2-9.8-3.8-14.8-5.3l-4.4 14.4zM185.2 45c-5.1-1.2-10.3-2.2-15.5-2.9l-2 14.9c4.7.6 9.4 1.5 14.1 2.6l3.4-14.6z" class="ast6"></path><path d="M436.6 194.7c-41.6 0-75.4 33.8-75.4 75.4 0 27.3-22.2 49.5-49.5 49.5-41.6 0-75.4 33.8-75.4 75.4s33.8 75.4 75.4 75.4c110.4 0 200.3-89.8 200.3-200.3 0-41.6-33.8-75.4-75.4-75.4zM311.7 455.3c-33.3 0-60.4-27.1-60.4-60.4s27.1-60.4 60.4-60.4c35.6 0 64.5-28.9 64.5-64.5 0-33.3 27.1-60.4 60.4-60.4S497 236.7 497 270c0 102.2-83.1 185.3-185.3 185.3z"></path><path d="M407.5 312.4l14.1 5.1c1.8-5.1 3.3-10.3 4.3-15.6l-14.7-2.8c-.9 4.6-2.1 9-3.7 13.3zm-10.7 20.3l12.2 8.7c3.1-4.4 5.9-9.1 8.3-13.9l-13.4-6.6c-2 4.1-4.4 8-7.1 11.8z"></path><path d="M363.3 326.9c-14.2 12.9-32.5 19.9-51.6 19.9-26.5 0-48.1 21.6-48.1 48.1h15c0-18.2 14.8-33.1 33.1-33.1 22.8 0 44.7-8.5 61.6-23.8l-10-11.1z" class="ast6"></path><path d="M365.6 418.5l5.1 14.1c4.9-1.8 9.8-3.8 14.5-6l-6.4-13.6c-4.3 2.1-8.7 3.9-13.2 5.5zm-22.9 6.4l2.9 14.7c5.1-1 10.2-2.3 15.2-3.8l-4.3-14.4c-4.5 1.5-9.2 2.6-13.8 3.5zm-23.7 2.9l.7 15c5.2-.2 10.5-.7 15.6-1.4l-2-14.9c-4.8.7-9.5 1.1-14.3 1.3z"></path><path d="M481.9 254.1l-14.1 5c1.2 3.5 1.9 7.2 1.9 11 0 32.2-9.7 63.3-28 89.7l12.3 8.5c20.1-29 30.7-63 30.7-98.3 0-5.4-1-10.8-2.8-15.9zM454 225.3c-5.5-2.2-11.4-3.3-17.4-3.3v15c4.1 0 8.1.8 11.9 2.2l5.5-13.9zm10.2 26.5l12.5-8.3c-3.3-5-7.4-9.2-12.3-12.7l-8.7 12.2c3.4 2.5 6.2 5.4 8.5 8.8z" class="ast6"></path><path d="M172.9 367c-22.8-15-29-45.8-14-68.6 11.1-16.8 15-36.9 11-56.6-4-19.7-15.5-36.7-32.3-47.8-16.8-11.1-36.9-15-56.6-11-19.7 4-36.7 15.5-47.8 32.3-60.9 92.1-35.5 216.6 56.6 277.5 12.5 8.3 26.8 12.5 41.4 12.5 5.1 0 10.2-.5 15.2-1.5 19.7-4 36.7-15.5 47.8-32.3s15-36.9 11-56.6c-4-19.8-15.5-36.8-32.3-47.9zm8.8 96.2c-8.9 13.5-22.5 22.6-38.3 25.9-15.8 3.2-31.9.1-45.4-8.8C12.8 424-10.7 308.8 45.7 223.6c8.9-13.5 22.5-22.6 38.3-25.9 4.1-.8 8.1-1.2 12.2-1.2 11.7 0 23.2 3.4 33.2 10 13.5 8.9 22.6 22.5 25.9 38.3 3.2 15.8.1 31.9-8.8 45.4-19.6 29.7-11.4 69.7 18.2 89.4 13.5 8.9 22.6 22.5 25.9 38.3 3.1 15.8 0 31.9-8.9 45.3z"></path><path d="M116.8 452C100.1 441 86 427.1 75 410.8l-12.4 8.4c12.2 18 27.6 33.2 45.9 45.3 6.9 4.5 14.7 6.9 22.8 6.9 2.8 0 5.6-.3 8.4-.9l-3-14.7c-7 1.5-14.1.1-19.9-3.8zm5.1-200.4c.4 1.8.5 3.6.5 5.4 0 5.1-1.5 10.2-4.4 14.5-10.7 16.2-16.3 34.8-16.3 54.1 0 6.6.7 13.3 2 19.9l14.7-3c-1.1-5.6-1.7-11.3-1.7-16.9 0-16.3 4.8-32.1 13.8-45.8 4.5-6.8 6.9-14.7 6.9-22.8 0-2.8-.3-5.6-.8-8.4-.3-1.3-.6-2.6-1-3.9l-14.3 4.4c.3.8.5 1.7.6 2.5zm-3.9-9.5l12.4-8.4c-3-4.5-6.9-8.3-11.5-11.4-.6-.4-1.1-.7-1.7-1.1l-7.7 12.9c.4.2.7.5 1.1.7 3 2 5.4 4.4 7.4 7.3zm-15.7-10.9l3.6-14.6c-5.9-1.5-12.1-1.6-18.2-.3l3 14.7c3.9-.8 7.9-.7 11.6.2z" class="ast6"></path></symbol></svg>
+
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/plugins.min.css">
+
+		<script>
+
+            var url = window.location.href.replace('#','')
+
+            var theme_uri = location.hostname === 'localhost' ? 'http://localhost:8967' : url.replace(window.location.pathname,'/mb-yug');
+
+			var site_defers = {
+				smoothscroll: 'js/vendors/smoothscroll.polyfill-0.4.4.js',
+                ymaps: `https://api-maps.yandex.ru/2.1/?lang=ru_RU`,
+			}
+
+		</script>
+
+        <script src="js/vendors/jquery-3.6.0.min.js" defer=""></script>
+        <script src="js/plugins.min.js" defer=""></script>
+        <script src="js/app.js" defer=""></script>
+
+    </body><!-- app -->
+</html>
