@@ -90,6 +90,7 @@
         <li class="has-children">
             <a href="services.html">Услуги</a>
             <ul>
+                <li class="item-all"><a href="service.html">Все услуги</a></li>
                 <li><a href="service.html">Наружная мойка автомобиля</a></li>
                 <li><a href="service.html">Уборка салона автомобиля</a></li>
                 <li><a href="service.html">Уход кожи салона</a></li>
@@ -187,6 +188,7 @@
         <li class="has-children">
             <a href="services.html">Услуги</a>
             <ul>
+                <li class="item-all"><a href="service.html">Все услуги</a></li>
                 <li><a href="service.html">Наружная мойка автомобиля</a></li>
                 <li><a href="service.html">Уборка салона автомобиля</a></li>
                 <li><a href="service.html">Уход кожи салона</a></li>
@@ -313,6 +315,9 @@
       </span>
     
                     </div>
+                    <div class="contacts-main__item-text">
+                        Съехав с Narva mnt на Bensiini, по левой стороне вы увидите заезд на подземную автопарковку с указателем “RAYTH”.
+                    </div>
                 </div>
                 <div data-aos="fade-up" class="contacts-main__item">
                     <div class="contacts-main__item-title">Время работы</div>
@@ -393,10 +398,12 @@
         <div class="get-there__items">
             <div class="get-there__item">
                 <div class="get-there__item-image">
-                    <img loading="lazy" width="560" height="470" sizes="100vw" srcset="
-                        files/contacts-img-s.jpg 300w,
-                        files/contacts-img-s.jpg 575w,
-                        files/contacts-img.jpg 1920w" src="files/contacts-img.jpg" alt="">
+                    <a href="files/contacts-img.jpg" data-fancybox="">
+                        <img loading="lazy" width="560" height="470" sizes="100vw" srcset="
+                            files/contacts-img-s.jpg 300w,
+                            files/contacts-img-s.jpg 575w,
+                            files/contacts-img.jpg 1920w" src="files/contacts-img.jpg" alt="">
+                    </a>
                 </div>
                 <div class="get-there__item-container">
                     <div class="get-there__item-text">
@@ -409,10 +416,12 @@
             </div>
             <div class="get-there__item">
                 <div class="get-there__item-image">
-                    <img loading="lazy" width="560" height="470" sizes="100vw" srcset="
-                        files/contacts-img-s.jpg 300w,
-                        files/contacts-img-s.jpg 575w,
-                        files/contacts-img.jpg 1920w" src="files/contacts-img.jpg" alt="">
+                    <a href="files/contacts-img.jpg" data-fancybox="">
+                        <img loading="lazy" width="560" height="470" sizes="100vw" srcset="
+                            files/contacts-img-s.jpg 300w,
+                            files/contacts-img-s.jpg 575w,
+                            files/contacts-img.jpg 1920w" src="files/contacts-img.jpg" alt="">
+                    </a>
                 </div>
                 <div class="get-there__item-container">
                     <div class="get-there__item-text">
@@ -662,16 +671,22 @@
 
             var waitGoogleMaps = function(){
                 if( typeof google !== "undefined" ) {
-                    initMap();
-                    loadReviews();
+                    if(googleMaps.length > 0) {
+                        initMap();
+                    }
+                    if(googleReviews.length > 0) {
+                        loadReviews();
+                    }
                 } else {
                     setTimeout(waitGoogleMaps, 150);
                 }
             };
 
             function isElementInViewport(el) {
-              var rect = el.getBoundingClientRect();
-              return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+                if(el) {
+                    var rect = el.getBoundingClientRect();
+                    return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+                }
             }
 
             function scrollMapController() {
@@ -700,6 +715,9 @@
             }
 
         </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 
         <!-- <script src="js/vendors/jquery-3.6.0.min.js"></script> -->
         <script src="js/plugins.min.js"></script>

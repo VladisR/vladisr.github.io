@@ -109,6 +109,8 @@ accordionTitle.forEach(item => {
 //     }
 // })();
 
+Fancybox.bind("[data-fancybox]", {// Your custom options
+});
 setDelay('.brands', '.brands__item', 4);
 
 function videos() {

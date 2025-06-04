@@ -165,6 +165,9 @@
   .header .main-menu > ul > li ul li {
     margin-bottom: 6px;
   }
+  .header .main-menu > ul > li ul li.item-all {
+    display: none;
+  }
   .header .main-menu > ul > li ul li:last-child {
     margin-bottom: 0;
   }

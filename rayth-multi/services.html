@@ -90,6 +90,7 @@
         <li class="has-children">
             <a href="services.html">Услуги</a>
             <ul>
+                <li class="item-all"><a href="service.html">Все услуги</a></li>
                 <li><a href="service.html">Наружная мойка автомобиля</a></li>
                 <li><a href="service.html">Уборка салона автомобиля</a></li>
                 <li><a href="service.html">Уход кожи салона</a></li>
@@ -187,6 +188,7 @@
         <li class="has-children">
             <a href="services.html">Услуги</a>
             <ul>
+                <li class="item-all"><a href="service.html">Все услуги</a></li>
                 <li><a href="service.html">Наружная мойка автомобиля</a></li>
                 <li><a href="service.html">Уборка салона автомобиля</a></li>
                 <li><a href="service.html">Уход кожи салона</a></li>
@@ -1028,35 +1030,51 @@
             <div class="carousel__items swiper-wrapper">
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car1.jpeg" alt="">
+                    <a href="files/car1.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car1.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car2.jpeg" alt="">
+                    <a href="files/car2.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car2.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car3.jpeg" alt="">
+                    <a href="files/car3.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car3.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car4.jpeg" alt="">
+                    <a href="files/car4.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car4.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car1.jpeg" alt="">
+                    <a href="files/car1.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car1.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car2.jpeg" alt="">
+                    <a href="files/car2.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car2.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car3.jpeg" alt="">
+                    <a href="files/car3.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car3.jpeg" alt="">
+                    </a>
                 </div>
                 
                 <div class="carousel__item swiper-slide">
-                    <img loading="lazy" width="360" height="250" src="files/car4.jpeg" alt="">
+                    <a href="files/car4.jpeg" title="Изображение" aria-label="Изображение" data-fancybox="">
+                        <img loading="lazy" width="360" height="250" src="files/car4.jpeg" alt="">
+                    </a>
                 </div>
                 
             </div>
@@ -1550,16 +1568,22 @@
 
             var waitGoogleMaps = function(){
                 if( typeof google !== "undefined" ) {
-                    initMap();
-                    loadReviews();
+                    if(googleMaps.length > 0) {
+                        initMap();
+                    }
+                    if(googleReviews.length > 0) {
+                        loadReviews();
+                    }
                 } else {
                     setTimeout(waitGoogleMaps, 150);
                 }
             };
 
             function isElementInViewport(el) {
-              var rect = el.getBoundingClientRect();
-              return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+                if(el) {
+                    var rect = el.getBoundingClientRect();
+                    return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+                }
             }
 
             function scrollMapController() {
@@ -1588,6 +1612,9 @@
             }
 
         </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 
         <!-- <script src="js/vendors/jquery-3.6.0.min.js"></script> -->
         <script src="js/plugins.min.js"></script>

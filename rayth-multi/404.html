@@ -90,6 +90,7 @@
         <li class="has-children">
             <a href="services.html">Услуги</a>
             <ul>
+                <li class="item-all"><a href="service.html">Все услуги</a></li>
                 <li><a href="service.html">Наружная мойка автомобиля</a></li>
                 <li><a href="service.html">Уборка салона автомобиля</a></li>
                 <li><a href="service.html">Уход кожи салона</a></li>
@@ -187,6 +188,7 @@
         <li class="has-children">
             <a href="services.html">Услуги</a>
             <ul>
+                <li class="item-all"><a href="service.html">Все услуги</a></li>
                 <li><a href="service.html">Наружная мойка автомобиля</a></li>
                 <li><a href="service.html">Уборка салона автомобиля</a></li>
                 <li><a href="service.html">Уход кожи салона</a></li>
@@ -278,7 +280,7 @@
 	<div class="error-404">
 	<div class="error-404__container">
 		<div class="error-404__overtitle">404</div>
-		<h1>Эта страница не прошла техосмотр</h1>
+		<h1 class="error-404__title h1">Эта страница не прошла техосмотр</h1>
 		<a href="index.html" class="site-button" title="Вернуться на главную" aria-label="Вернуться на главную">Вернуться на главную</a>
 	</div>
 	<div class="error-404__image">
@@ -458,16 +460,22 @@
 
             var waitGoogleMaps = function(){
                 if( typeof google !== "undefined" ) {
-                    initMap();
-                    loadReviews();
+                    if(googleMaps.length > 0) {
+                        initMap();
+                    }
+                    if(googleReviews.length > 0) {
+                        loadReviews();
+                    }
                 } else {
                     setTimeout(waitGoogleMaps, 150);
                 }
             };
 
             function isElementInViewport(el) {
-              var rect = el.getBoundingClientRect();
-              return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+                if(el) {
+                    var rect = el.getBoundingClientRect();
+                    return rect.top <= (window.innerHeight || document.documentElement.clientHeight);
+                }
             }
 
             function scrollMapController() {
@@ -496,6 +504,9 @@
             }
 
         </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 
         <!-- <script src="js/vendors/jquery-3.6.0.min.js"></script> -->
         <script src="js/plugins.min.js"></script>
