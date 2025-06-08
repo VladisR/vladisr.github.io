@@ -130,17 +130,13 @@ function videos() {
         html.querySelector('.video-modal__content').innerHTML = `
 
 
-
                       <video width="1160" height="480" controls playsinline>
-
 
 
                           <source src="${url}" type="video/mp4">
 
 
-
                       </video>
-
 
 
                   `;
@@ -644,14 +640,10 @@ setDelay('.mosaic', '.mosaic__item', 2);
   let viewY = 100;
   let inMemory = false;
   /**
-  
-   * Native scrollTo with callback
-  
-   * @param offset - offset to scroll to
-  
-   * @param callback - callback function
-  
-   */
+       * Native scrollTo with callback
+       * @param offset - offset to scroll to
+       * @param callback - callback function
+       */
 
   function scrollTo(offset, callback) {
     const fixedOffset = offset.toFixed();
@@ -808,53 +800,40 @@ function createModal() {
   videoModal.innerHTML = `
 
 
-
           <div class="video-modal__in">
-
 
 
               <button type="button" data-modal-close="" class="video-modal__close">
 
 
-
             <span class="svg-icon svg-icon--close" aria-hidden="true">
-
 
 
               <svg class="svg-icon__link">
 
 
-
                 <use xlink:href="#close"></use>
-
 
 
               </svg>
 
 
-
             </span>
-
 
 
           </button>
 
 
-
               <div class="video-modal__content">
-
 
 
   
 
 
-
               </div>
 
 
-
           </div>
-
 
 
       `;
@@ -949,7 +928,8 @@ function ultimateLineWrapperMachine3000(node) {
   node.innerHTML = finalHTML.trim();
 }
 
-setTimeout(function () {
+document.fonts.ready.then(() => {
+  // setTimeout(function(){
   if (window.matchMedia("(min-width: 992px)").matches) {
     for (const node of document.getElementsByClassName('text-splitter')) {
       ultimateLineWrapperMachine3000(node);
@@ -963,8 +943,8 @@ setTimeout(function () {
       child.style.animationDelay = delay + 'ms';
       delay += 150;
     });
-  });
-}, 100);
+  }); // }, 100)
+});
 
 function selectorsInViewPort() {
   let blocks = document.querySelectorAll('.js-block');
