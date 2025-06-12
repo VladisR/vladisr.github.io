@@ -34,9 +34,12 @@ let body = document.body;
 let scrollbarWidht = window.innerWidth - body.clientWidth;
 let isApple = /iPod|iPad|iPhone/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1,
     isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Mobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+let click;
+isMobile == true ? click = 'touchend' : click = 'click';
 window.addEventListener('resize', () => {
   isApple = /iPod|iPad|iPhone/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
   isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Mobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+  isMobile == true ? click = 'touchend' : click = 'click';
 });
 
 function headerSetClass() {
@@ -488,7 +491,8 @@ Object.defineProperty(HTMLMediaElement.prototype, 'isPlaying', {
 videoPlayers.forEach(video => {
   const videoContainer = video.closest('.c-video');
   const play = videoContainer.querySelector('.c-video__play');
-  play.addEventListener('click', function () {
+  video.addEventListener(click, function () {
+    // play.addEventListener('click', function(){
     setTimeout(function () {
       if (!video.closest('.c-video').classList.contains('is-clicked')) {
         if (video.getAttributeNames()[2] != 'controls') {

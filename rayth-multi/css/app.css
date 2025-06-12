@@ -900,11 +900,15 @@ html {
   background: #ed1c24;
   border-color: #ed1c24;
 }
+.c-video.is-clicked {
+  cursor: auto;
+}
 .c-video.is-clicked:before {
   display: none;
 }
 .c-video.is-clicked .c-video__play {
   opacity: 0;
+  pointer-events: none;
 }
 .c-video.is-playing:before {
   opacity: 0;
@@ -922,6 +926,7 @@ html {
   height: 100%;
   z-index: 2;
   transition: 0.3s opacity, 0.3s visibility;
+  pointer-events: none;
 }
 .c-video__play > span {
   position: absolute;
@@ -1751,6 +1756,7 @@ input {
 }
 .mobile-sidebar .socials__items {
   justify-content: center;
+  margin-left: 0;
 }
 .mobile-sidebar .socials__item {
   margin-left: 8px;
