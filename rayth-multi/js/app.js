@@ -481,62 +481,121 @@ switchers.forEach(switcher => {
   });
 }); // };
 // switcher();
+// const videoPlayers = document.querySelectorAll('.js-player');
 
-const videoPlayers = document.querySelectorAll('.js-player');
 Object.defineProperty(HTMLMediaElement.prototype, 'isPlaying', {
   get: function () {
     return !this.paused && !this.ended && this.readyState > 2;
   }
+}); // videoPlayers.forEach((video) => {
+//     const videoContainer = video.closest('.c-video');
+//     const play = videoContainer.querySelector('.c-video__play');
+//     video.addEventListener(click, function(){
+//     // play.addEventListener('click', function(){
+//         // setTimeout(function(){
+//             videoPlayers.forEach((videos) => {
+//                 if (videos.isPlaying) {
+//                     // videos.pause();
+//                 }
+//             })
+//             // if(this.isPlaying) {
+//             //     this.pause()
+//             //     console.log(333)
+//             // } else {
+//             //     this.play()
+//             // }
+//             // if (video.paused) {
+//             //     console.log('Video is playing');
+//             //     video.play();
+//             // } else {
+//             //     console.log('Video is paused');
+//             // }
+//             if(!video.closest('.c-video').classList.contains('is-clicked')) {
+//                 if (video.getAttributeNames()[2] != 'controls') {
+//                     video.setAttribute('controls', '');
+//                     video.setAttribute('autoplay', '');
+//                 }
+//             }
+//             video.addEventListener('play', () => {
+//                 videoContainer.classList.add('is-playing')
+//             });
+//             video.addEventListener('pause', () => {
+//                 videoContainer.classList.remove('is-playing')
+//             });
+//             video.addEventListener('ended', () => {
+//                 videoContainer.classList.remove('is-playing')
+//             });
+//             video.addEventListener('seeking', () => {
+//                 videoContainer.classList.add('is-playing')
+//             });
+//             video.addEventListener('seeked', () => {
+//                 videoContainer.classList.add('is-playing')
+//             });
+//             video.closest('.c-video').classList.add('is-clicked')
+//             // video.play()
+//             // setTimeout(function(){
+//                 // if (video.isPlaying) {
+//                 //     video.pause();
+//                 //     console.log('Video is playing');
+//                 // } else {
+//                 //     video.play();
+//                 //     console.log('Video is paused');
+//                 // }
+//             // }, 300)
+//             // if (video.paused) {
+//             //     console.log('Video is playing');
+//             //     // video.play();
+//             // } else {
+//             //     console.log('Video is paused');
+//             // }
+//         // })
+//     });
+// });
+
+let videoPlayers = document.querySelectorAll('.js-player');
+videoPlayers.forEach(video => {
+  video.addEventListener('play', () => {
+    videoPlayers.forEach(otherVideo => {
+      if (otherVideo !== video) {
+        otherVideo.pause();
+      }
+    });
+  });
 });
 videoPlayers.forEach(video => {
-  const videoContainer = video.closest('.c-video');
-  const play = videoContainer.querySelector('.c-video__play');
-  video.addEventListener(click, function () {
-    // play.addEventListener('click', function(){
-    setTimeout(function () {
-      if (!video.closest('.c-video').classList.contains('is-clicked')) {
-        if (video.getAttributeNames()[2] != 'controls') {
-          video.setAttribute('controls', '');
-        }
-      }
-
-      video.addEventListener('play', () => {
-        videoContainer.classList.add('is-playing');
-      });
-      video.addEventListener('pause', () => {
-        videoContainer.classList.remove('is-playing');
-      });
-      video.addEventListener('ended', () => {
-        videoContainer.classList.remove('is-playing');
-      });
-      video.addEventListener('seeking', () => {
-        videoContainer.classList.add('is-playing');
-      });
-      video.addEventListener('seeked', () => {
-        videoContainer.classList.add('is-playing');
-      });
-      videoPlayers.forEach(videos => {
-        if (!videos.paused) {
-          videos.pause();
-        }
-      });
-      video.closest('.c-video').classList.add('is-clicked');
-      video.play(); // setTimeout(function(){
-      //     if (video.isPlaying) {
-      //         console.log('Video is playing');
-      //         // video.pause();
-      //     } else {
-      //         // video.play();
-      //         console.log('Video is paused');
-      //     }
-      // }, 300)
-      // if (!video.paused) {
-      //     console.log('Video is playing');
-      //     // video.play();
-      // } else {
-      //     console.log('Video is paused');
-      // }
+  video.addEventListener(click, () => {
+    video.addEventListener('play', () => {
+      video.closest('.c-video').classList.add('is-playing');
     });
+    video.addEventListener('pause', () => {
+      video.closest('.c-video').classList.remove('is-playing');
+    });
+    video.addEventListener('ended', () => {
+      video.closest('.c-video').classList.remove('is-playing');
+    });
+    video.addEventListener('seeking', () => {
+      video.closest('.c-video').classList.add('is-playing');
+    });
+    video.addEventListener('seeked', () => {
+      video.closest('.c-video').classList.add('is-playing');
+    });
+
+    if (!video.closest('.c-video').classList.contains('is-clicked')) {
+      if (video.getAttributeNames()[2] != 'controls') {
+        video.setAttribute('controls', '');
+        video.closest('.c-video').classList.add('is-clicked');
+        setTimeout(function () {
+          video.play();
+        }, 50);
+      }
+    } // else if (video.closest('.c-video').classList.contains('is-clicked')) {
+    //     if (video.paused) {
+    //         video.play();
+    //     } else {
+    //         video.pause();
+    //     }
+    // }
+
   });
 });
 
