@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito-Regular.woff2") format('woff2'), url("../fonts/Nunito-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pribambas';
+  src: url("../fonts/Pribambas-Regular.woff2") format('woff2'), url("../fonts/Pribambas-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .app-footer {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -348,7 +362,6 @@ html {
   font-size: 0;
   white-space: nowrap;
   overflow-y: auto;
-  scrollbar-height: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -654,7 +667,6 @@ html {
   margin-right: -12px;
   padding-left: 12px;
   padding-right: 12px;
-  scrollbar-height: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -1383,7 +1395,6 @@ a.b-tag:hover .svg-icon {
   margin: 0 -24px;
   padding: 0 8px 0 24px;
   overflow-y: auto;
-  scrollbar-height: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -1420,7 +1431,6 @@ a.b-tag:hover .svg-icon {
   position: relative;
   padding-top: 10px;
   font-size: 0;
-  scrollbar-height: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -1600,8 +1610,8 @@ a.b-tag:hover .svg-icon {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: right-center;
-     object-position: right-center;
+  -o-object-position: right center;
+     object-position: right center;
 }
 .info-block .site-button {
   margin-top: 24px;
@@ -2115,7 +2125,6 @@ body .mobile-x-scroll__content {
       -ms-flex-flow: row;
           flex-flow: row;
   overflow-y: auto;
-  scrollbar-height: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -2657,7 +2666,6 @@ body .mobile-x-scroll__content > * {
       -ms-flex-flow: row;
           flex-flow: row;
   overflow-y: auto;
-  scrollbar-height: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -4816,6 +4824,9 @@ body .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   .product-item {
     padding-left: 24px;
   }
+  .product-list__items.row-cols-sm-2 >* {
+    width: 50%;
+  }
   .product-list__items {
     margin-left: -24px;
     display: -webkit-box;
@@ -5102,7 +5113,6 @@ body .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
     border: 2px solid #f2d9b2;
     border-radius: 32px;
     overflow-y: auto;
-    scrollbar-height: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
@@ -5629,7 +5639,7 @@ body .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
     margin-bottom: auto;
     font-size: 32px;
     line-height: 32px;
-    max-width: auto;
+    max-width: none;
   }
   .product-h__params {
     width: 100%;
@@ -7010,6 +7020,17 @@ body .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   .product-list.mobile-x-scroll {
     margin-bottom: 90px;
   }
+  .product-list.mobile-x-scroll .mobile-x-scroll__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .product-list.mobile-x-scroll .mobile-x-scroll__content > * {
+    width: 50%;
+    max-width: 386px;
+  }
   .product-list__title {
     margin-bottom: 55px;
   }
@@ -7433,6 +7454,7 @@ body .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   .b-list__item {
     padding-left: 35px;
     padding-right: 35px;
+    width: 25%;
   }
   .b-list__item:nth-child(3),
   .b-list__item:nth-child(4) {
@@ -7559,6 +7581,13 @@ body .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
     margin-bottom: 0;
   }
   .product-h__params {
+    max-width: none;
+  }
+  .product-list__items.row-cols-xl-3 >* {
+    width: 33.33%;
+  }
+  .product-list.mobile-x-scroll .mobile-x-scroll__content >* {
+    width: 25%;
     max-width: none;
   }
   .s-cart {

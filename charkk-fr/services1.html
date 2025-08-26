@@ -677,25 +677,28 @@
         <link rel="stylesheet" href="css/plugins.min.css">
 
 		<script>
+
+            var url = window.location.href.replace('#','');
+
 			var site_defers = {
 				smoothscroll: 'js/vendors/smoothscroll.polyfill-0.4.4.js',
 			}
 
-        // start >>> только для демонстрации вёрстки
-        // позволяет переключать URL на котором находятся статические ресурсы
+            // start >>> только для демонстрации вёрстки
+            // позволяет переключать URL на котором находятся статические ресурсы
 
-        var theme_uri = location.hostname === 'localhost' ? 'http://localhost:8967' : 'https://vladisr.github.io/charkk-fr';
-        /* end >>> только для демонстрации вёрстки */
+            var theme_uri = location.hostname === 'localhost' ? 'http://localhost:8967' : url.replace(window.location.pathname,'/portfolio/charkk-fr');
+            /* end >>> только для демонстрации вёрстки */
 
-        var charkk = {
-            theme_uri: theme_uri, // используется в скриптах для подключения статических ресурсов
-            assets_uri: theme_uri,
-            yandex_maps_api_key: '5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82',
-        }
+            var charkk = {
+                theme_uri: theme_uri, // используется в скриптах для подключения статических ресурсов
+                assets_uri: theme_uri,
+                yandex_maps_api_key: '5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82',
+            }
 
-        var defers = {
-            ymaps: `https://api-maps.yandex.ru/2.1/?apikey=${charkk.yandex_maps_api_key}&lang=ru_RU`,
-        }
+            var defers = {
+                ymaps: `https://api-maps.yandex.ru/2.1/?apikey=${charkk.yandex_maps_api_key}&lang=ru_RU`,
+            }
 
 		</script>
         <script src="js/vendors/jquery-3.6.0.min.js" defer=""></script>

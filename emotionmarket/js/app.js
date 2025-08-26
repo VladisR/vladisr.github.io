@@ -36,11 +36,10 @@ $(function () {
       isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Mobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
   $(window).on('resize', function () {
     isApple = /iPod|iPad|iPhone/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
-    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Mobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
-    enableHtmlScroll();
-    listSlider();
-    paramsMove();
-    productThumbnailsSlider();
+    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Mobile|Opera Mini/i.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1; // enableHtmlScroll();
+    // listSlider();
+    // paramsMove();
+    // productThumbnailsSlider();
 
     if (isMobile) {
       $('body').addClass('touchDevice').removeClass('descktop');
@@ -666,15 +665,13 @@ $(function () {
   });
 
   if ($('.sticky-sidebar').length) {
-    $(window).on('load', function () {
-      var indent = 24;
-      var sidebar = new StickySidebar('.sticky-sidebar', {
-        topSpacing: 24,
-        bottomSpacing: 24,
-        containerSelector: '.content-wrapper',
-        innerWrapperSelector: '.sticky-sidebar',
-        minWidth: 1022
-      });
+    var indent = 24;
+    var sidebar = new StickySidebar('.sticky-sidebar', {
+      topSpacing: 24,
+      bottomSpacing: 24,
+      containerSelector: '.content-wrapper',
+      innerWrapperSelector: '.sticky-sidebar',
+      minWidth: 1022
     });
   }
 });
